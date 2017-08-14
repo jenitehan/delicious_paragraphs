@@ -1,0 +1,14 @@
+langcode: en
+status: true
+dependencies: {  }
+name: dp_full
+label: 'DP Full'
+effects:
+  0c190192-3962-4f92-bfee-d6e5107a9db1:
+    uuid: 0c190192-3962-4f92-bfee-d6e5107a9db1
+    id: image_scale
+    weight: 1
+    data:
+      width: 2000
+      height: null
+      upscale: false

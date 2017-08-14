@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_dp_image_size
+    - paragraphs.paragraphs_type.dp_image
+  module:
+    - options
+id: paragraph.dp_image.field_dp_image_size
+field_name: field_dp_image_size
+entity_type: paragraph
+bundle: dp_image
+label: Size
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: dp_full
+default_value_callback: ''
+settings: {  }
+field_type: list_string

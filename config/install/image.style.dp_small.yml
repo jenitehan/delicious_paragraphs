@@ -1,0 +1,14 @@
+langcode: en
+status: true
+dependencies: {  }
+name: dp_small
+label: 'DP Small'
+effects:
+  20d55c34-fe69-4a1a-88b9-a7ef3af3b51f:
+    uuid: 20d55c34-fe69-4a1a-88b9-a7ef3af3b51f
+    id: image_scale
+    weight: 1
+    data:
+      width: 150
+      height: null
+      upscale: false

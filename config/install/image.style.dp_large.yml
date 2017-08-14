@@ -1,0 +1,14 @@
+langcode: en
+status: true
+dependencies: {  }
+name: dp_large
+label: 'DP Large'
+effects:
+  49968121-ed5f-4baf-844d-dbe6a1049773:
+    uuid: 49968121-ed5f-4baf-844d-dbe6a1049773
+    id: image_scale
+    weight: 1
+    data:
+      width: 800
+      height: null
+      upscale: false

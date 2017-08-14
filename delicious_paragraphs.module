@@ -1,0 +1,53 @@
+<?php
+
+/**
+ * @file
+ * Contains delicious_paragraphs.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function delicious_paragraphs_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the delicious_paragraphs module.
+    case 'help.page.delicious_paragraphs':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Default paragraphs for Delicious Creative websites.') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function delicious_paragraphs_theme($existing, $type, $theme, $path) {
+  return [
+    'paragraph__dp_image' => [
+      'base hook' => 'paragraph',
+    ],
+    'field__paragraph__field_dp_image__dp_image' => [
+      'base hook' => 'paragraph',
+    ],
+  ];
+}
+
+/**
+ * Implements template_preprocess_field().
+ */
+function delicious_paragraphs_preprocess_field(&$variables, $hook) {
+  $element = $variables['element'];
+  
+  // Output image size as selected image style.
+  if ($element['#field_name'] == 'field_dp_image') {
+    $size = $element['#object']->get('field_dp_image_size')->first()->getValue();
+    foreach ($variables['items'] as $delta => $item) {
+      $variables['items'][$delta]['content']['#image_style'] = $size['value'];
+    }
+  }
+}
