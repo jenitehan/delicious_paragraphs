@@ -1,14 +1,10 @@
 {
-  "name": "drupal/delicious_paragraphs",
+  "name": "jenitehan/delicious_paragraphs",
   "type": "drupal-module",
   "description": "Default paragraphs for Delicious Creative websites.",
   "keywords": ["Drupal"],
   "license": "GPL-2.0+",
-  "homepage": "https://www.drupal.org/project/delicious_paragraphs",
+  "homepage": "https://github.com/jenitehan/delicious_paragraphs",
   "minimum-stability": "dev",
-  "support": {
-    "issues": "https://www.drupal.org/project/issues/delicious_paragraphs",
-    "source": "http://cgit.drupalcode.org/delicious_paragraphs"
-  },
   "require": { }
 }
