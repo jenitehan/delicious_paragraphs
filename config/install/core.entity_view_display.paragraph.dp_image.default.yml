@@ -9,6 +9,7 @@ dependencies:
     - paragraphs.paragraphs_type.dp_image
   module:
     - image
+    - options
 id: paragraph.dp_image.default
 targetEntityType: paragraph
 bundle: dp_image
@@ -23,6 +24,18 @@ content:
     third_party_settings: {  }
     type: image
     region: content
-hidden:
-  field_dp_image_alignment: true
-  field_dp_image_size: true
+  field_dp_image_alignment:
+    type: list_key
+    weight: 1
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+  field_dp_image_size:
+    type: list_key
+    weight: 2
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }
