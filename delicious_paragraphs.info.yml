@@ -4,6 +4,7 @@ description: Default paragraphs for Delicious Creative websites.
 core: 8.x
 package: Paragraphs
 dependencies:
+  - image
   - link
   - paragraphs
 
