@@ -1,0 +1,33 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.dp_inline_gallery.field_dp_inline_gallery_images
+    - field.field.paragraph.dp_inline_gallery.field_dp_inline_gallery_style
+    - image.style.dp_gallery_thumb_small
+    - paragraphs.paragraphs_type.dp_inline_gallery
+  module:
+    - image
+    - options
+id: paragraph.dp_inline_gallery.default
+targetEntityType: paragraph
+bundle: dp_inline_gallery
+mode: default
+content:
+  field_dp_inline_gallery_images:
+    weight: 0
+    label: hidden
+    settings:
+      image_style: dp_gallery_thumb_small
+      image_link: file
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_dp_inline_gallery_style:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_key
+    region: content
+hidden: {  }

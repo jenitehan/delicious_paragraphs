@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_dp_inline_gallery_style
+    - paragraphs.paragraphs_type.dp_inline_gallery
+  module:
+    - options
+id: paragraph.dp_inline_gallery.field_dp_inline_gallery_style
+field_name: field_dp_inline_gallery_style
+entity_type: paragraph
+bundle: dp_inline_gallery
+label: Style
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: dp-inline-gallery--columns-4
+default_value_callback: ''
+settings: {  }
+field_type: list_string

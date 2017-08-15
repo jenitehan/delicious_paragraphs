@@ -1,0 +1,13 @@
+langcode: en
+status: true
+dependencies: {  }
+name: dp_gallery_thumb_medium
+label: 'DP gallery thumb medium'
+effects:
+  525b2e7b-7082-4c05-858f-e6a8f9e515c6:
+    uuid: 525b2e7b-7082-4c05-858f-e6a8f9e515c6
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 400
+      height: 400

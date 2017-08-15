@@ -25,6 +25,15 @@ config_devel:
   - field.storage.paragraph.field_dp_image_size
   - paragraphs.paragraphs_type.dp_image
 
+  # Inline gallery paragraph.
+  - core.entity_form_display.paragraph.dp_inline_gallery.default
+  - core.entity_view_display.paragraph.dp_inline_gallery.default
+  - field.field.paragraph.dp_inline_gallery.field_dp_inline_gallery_images
+  - field.field.paragraph.dp_inline_gallery.field_dp_inline_gallery_style
+  - field.storage.paragraph.field_dp_inline_gallery_images
+  - field.storage.paragraph.field_dp_inline_gallery_style
+  - paragraphs.paragraphs_type.dp_inline_gallery
+
   # Table paragraph.
   - core.entity_form_display.paragraph.dp_table.default
   - core.entity_view_display.paragraph.dp_table.default
@@ -43,6 +52,8 @@ config_devel:
 
   # Image styles.
   - image.style.dp_full
+  - image.style.dp_gallery_thumb_medium
+  - image.style.dp_gallery_thumb_small
   - image.style.dp_large
   - image.style.dp_medium
   - image.style.dp_small

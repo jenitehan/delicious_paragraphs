@@ -1,0 +1,37 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_dp_inline_gallery_images
+    - paragraphs.paragraphs_type.dp_inline_gallery
+  module:
+    - image
+id: paragraph.dp_inline_gallery.field_dp_inline_gallery_images
+field_name: field_dp_inline_gallery_images
+entity_type: paragraph
+bundle: dp_inline_gallery
+label: Images
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: images/inline-gallery
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: 4000x3000
+  min_resolution: ''
+  alt_field: true
+  alt_field_required: true
+  title_field: true
+  title_field_required: false
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: image

@@ -1,0 +1,6 @@
+langcode: en
+status: true
+dependencies: {  }
+id: dp_inline_gallery
+label: 'Inline gallery'
+behavior_plugins: {  }

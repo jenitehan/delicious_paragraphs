@@ -1,0 +1,13 @@
+langcode: en
+status: true
+dependencies: {  }
+name: dp_gallery_thumb_small
+label: 'DP gallery thumb small'
+effects:
+  188b3645-ac8b-4776-82e6-0f574bc8af36:
+    uuid: 188b3645-ac8b-4776-82e6-0f574bc8af36
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 200
+      height: 200
