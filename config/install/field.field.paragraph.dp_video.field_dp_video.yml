@@ -1,0 +1,24 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_dp_video
+    - paragraphs.paragraphs_type.dp_video
+  module:
+    - video_embed_field
+id: paragraph.dp_video.field_dp_video
+field_name: field_dp_video
+entity_type: paragraph
+bundle: dp_video
+label: Video
+description: 'Enter the URL of the video. YouTube and Vimeo are supported. For example: https://www.youtube.com/watch?v=qOXzRqKqai8'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_providers:
+    vimeo: vimeo
+    youtube: youtube
+    youtube_playlist: '0'
+field_type: video_embed_field

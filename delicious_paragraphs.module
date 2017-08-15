@@ -31,10 +31,16 @@ function delicious_paragraphs_theme($existing, $type, $theme, $path) {
     'paragraph__dp_image' => [
       'base hook' => 'paragraph',
     ],
+    'paragraph__dp_video' => [
+      'base hook' => 'paragraph',
+    ],
     'field__paragraph__field_dp_image__dp_image' => [
       'base hook' => 'paragraph',
     ],
     'field__paragraph__field_dp_table__dp_table' => [
+      'base hook' => 'paragraph',
+    ],
+    'field__paragraph__field_dp_video__dp_video' => [
       'base hook' => 'paragraph',
     ],
   ];
@@ -51,6 +57,14 @@ function delicious_paragraphs_preprocess_field(&$variables, $hook) {
     $size = $element['#object']->get('field_dp_image_size')->first()->getValue();
     foreach ($variables['items'] as $delta => $item) {
       $variables['items'][$delta]['content']['#image_style'] = $size['value'];
+    }
+  }
+
+  // Autoplay videos.
+  if ($element['#field_name'] == 'field_dp_video') {
+    $autoplay = $element['#object']->get('field_dp_video_autoplay')->first()->getValue();
+    foreach ($variables['items'] as $delta => $item) {
+      $variables['items'][$delta]['content']['children']['#query']['autoplay'] = $autoplay['value'];
     }
   }
 }

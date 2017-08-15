@@ -1,0 +1,31 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.dp_video.field_dp_video
+    - field.field.paragraph.dp_video.field_dp_video_autoplay
+    - paragraphs.paragraphs_type.dp_video
+  module:
+    - video_embed_field
+id: paragraph.dp_video.default
+targetEntityType: paragraph
+bundle: dp_video
+mode: default
+content:
+  field_dp_video:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    type: video_embed_field_textfield
+    region: content
+  field_dp_video_autoplay:
+    weight: 1
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

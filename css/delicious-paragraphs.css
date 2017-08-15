@@ -5,6 +5,7 @@
 /**
  * Images.
  */
+
 .dp-image {
   margin-bottom: 20px;
 }
@@ -46,4 +47,13 @@
     float: right;
     margin-left: 20px;
   }
+}
+
+/**
+ * Video.
+ */
+
+.dp-video {
+  clear: both;
+  margin-bottom: 20px;
 }
