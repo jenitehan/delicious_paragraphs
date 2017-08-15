@@ -2,7 +2,7 @@ langcode: en
 status: true
 dependencies: {  }
 name: dp_full
-label: 'DP Full'
+label: 'DP full'
 effects:
   0c190192-3962-4f92-bfee-d6e5107a9db1:
     uuid: 0c190192-3962-4f92-bfee-d6e5107a9db1

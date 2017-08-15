@@ -2,7 +2,7 @@ langcode: en
 status: true
 dependencies: {  }
 name: dp_medium
-label: 'DP Medium'
+label: 'DP medium'
 effects:
   9eb90eba-610b-41de-b42e-becccf27f55c:
     uuid: 9eb90eba-610b-41de-b42e-becccf27f55c
