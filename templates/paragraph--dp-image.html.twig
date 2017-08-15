@@ -37,6 +37,8 @@
  */
 #}
 
+{{ attach_library('delicious_paragraphs/delicious-paragraphs') }}
+
 {# Renders Alignment field. #}
 {# Sets class name from values in database. #}
 {% if content.field_dp_image_alignment|render %}
@@ -68,6 +70,7 @@ set classes = [
 'paragraph',
 'paragraph--type--' ~ paragraph.bundle|clean_class,
 view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+'dp-image',
 ]
 %}
 

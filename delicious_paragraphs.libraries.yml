@@ -1,0 +1,5 @@
+delicious-paragraphs:
+  css:
+    component:
+      css/delicious-paragraphs.css:
+        minified: false

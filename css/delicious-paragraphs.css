@@ -1,0 +1,49 @@
+/**
+ * CSS for Delicious Paragraphs.
+ */
+
+/**
+ * Images.
+ */
+.dp-image {
+  margin-bottom: 20px;
+}
+
+.dp-image img {
+  display: block;
+}
+
+.dp-image--center {
+  min-width: 100%;
+}
+
+.dp-image--center img {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 600px) {
+  
+  .dp-image--left.dp-image--small {
+    float: left;
+    margin-right: 20px;
+  }
+  
+  .dp-image--right.dp-image--small {
+    float: right;
+    margin-left: 20px;
+  }
+}
+
+@media (min-width: 992px) {
+  
+  .dp-image--left.dp-image--medium {
+    float: left;
+    margin-right: 20px;
+  }
+  
+  .dp-image--right.dp-image--medium {
+    float: right;
+    margin-left: 20px;
+  }
+}
