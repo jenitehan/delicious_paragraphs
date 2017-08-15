@@ -34,6 +34,9 @@ function delicious_paragraphs_theme($existing, $type, $theme, $path) {
     'field__paragraph__field_dp_image__dp_image' => [
       'base hook' => 'paragraph',
     ],
+    'field__paragraph__field_dp_table__dp_table' => [
+      'base hook' => 'paragraph',
+    ],
   ];
 }
 
