@@ -7,6 +7,7 @@ dependencies:
   - image
   - link
   - paragraphs
+  - tablefield
 
 config_devel:
   
@@ -22,6 +23,13 @@ config_devel:
   - field.storage.paragraph.field_dp_image_link
   - field.storage.paragraph.field_dp_image_size
   - paragraphs.paragraphs_type.dp_image
+
+  # Table paragraph.
+  - core.entity_form_display.paragraph.dp_table.default
+  - core.entity_view_display.paragraph.dp_table.default
+  - field.field.paragraph.dp_table.field_dp_table
+  - field.storage.paragraph.field_dp_table
+  - paragraphs.paragraphs_type.dp_table
 
   # Image styles.
   - image.style.dp_full

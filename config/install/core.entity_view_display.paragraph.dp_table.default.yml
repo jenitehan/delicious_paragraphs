@@ -1,0 +1,21 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.dp_table.field_dp_table
+    - paragraphs.paragraphs_type.dp_table
+  module:
+    - tablefield
+id: paragraph.dp_table.default
+targetEntityType: paragraph
+bundle: dp_table
+mode: default
+content:
+  field_dp_table:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: tablefield
+    region: content
+hidden: {  }
