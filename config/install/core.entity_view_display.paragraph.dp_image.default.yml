@@ -4,11 +4,13 @@ dependencies:
   config:
     - field.field.paragraph.dp_image.field_dp_image
     - field.field.paragraph.dp_image.field_dp_image_alignment
+    - field.field.paragraph.dp_image.field_dp_image_link
     - field.field.paragraph.dp_image.field_dp_image_size
     - image.style.dp_full
     - paragraphs.paragraphs_type.dp_image
   module:
     - image
+    - link
     - options
 id: paragraph.dp_image.default
 targetEntityType: paragraph
@@ -31,6 +33,18 @@ content:
     label: hidden
     settings: {  }
     third_party_settings: {  }
+  field_dp_image_link:
+    weight: 3
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link_separate
+    region: content
   field_dp_image_size:
     type: list_key
     weight: 2

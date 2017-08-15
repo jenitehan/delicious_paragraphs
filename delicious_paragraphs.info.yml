@@ -4,6 +4,7 @@ description: Default paragraphs for Delicious Creative websites.
 core: 8.x
 package: Paragraphs
 dependencies:
+  - link
   - paragraphs
 
 config_devel:
@@ -12,10 +13,12 @@ config_devel:
   - core.entity_form_display.paragraph.dp_image.default
   - core.entity_view_display.paragraph.dp_image.default
   - field.field.paragraph.dp_image.field_dp_image
-  - field.field.paragraph.dp_image.field_dp_image_size
   - field.field.paragraph.dp_image.field_dp_image_alignment
+  - field.field.paragraph.dp_image.field_dp_image_link
+  - field.field.paragraph.dp_image.field_dp_image_size
   - field.storage.paragraph.field_dp_image
   - field.storage.paragraph.field_dp_image_alignment
+  - field.storage.paragraph.field_dp_image_link
   - field.storage.paragraph.field_dp_image_size
   - paragraphs.paragraphs_type.dp_image
 
