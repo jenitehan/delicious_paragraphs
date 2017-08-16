@@ -52,9 +52,6 @@ function delicious_paragraphs_theme($existing, $type, $theme, $path) {
     'field__paragraph__field_dp_video__dp_video' => [
       'base hook' => 'paragraph',
     ],
-    'bootstrap_gallery' => [
-      'base hook' => 'bootstrap_gallery',
-    ],
   ];
 }
 
@@ -95,11 +92,16 @@ function delicious_paragraphs_preprocess_field(&$variables, $hook) {
 
     // Set the image style.
     foreach ($variables['items'] as $delta => $item) {
-      if ($element['#formatter'] == 'bootstrap_gallery_image_formatter') {
+      if (($gallery_style == 'dp-inline-gallery--large-left' || $gallery_style == 'dp-inline-gallery--large-right') && $element['#formatter'] == 'bootstrap_gallery_image_formatter') {
         foreach ($variables['items'][0]['content']['#images'] as $delta => $image) {
           if ($delta === 0) {
             $variables['items'][0]['content']['#images'][$delta]['thumb']['#image_style'] = 'dp_gallery_thumb_medium';
           }
+        }
+      }
+      if ($gallery_style == 'dp-inline-gallery--columns-2' && $element['#formatter'] == 'bootstrap_gallery_image_formatter') {
+        foreach ($variables['items'][0]['content']['#images'] as $delta => $image) {
+          $variables['items'][0]['content']['#images'][$delta]['thumb']['#image_style'] = $image_style;
         }
       }
       else {
@@ -110,6 +112,38 @@ function delicious_paragraphs_preprocess_field(&$variables, $hook) {
           $variables['items'][$delta]['content']['#image_style'] = $image_style;
         }
       }
+    }
+
+    // Create new render element so we can swap it with bootstrap gallery data.
+    $variables['images'] = $variables['items'];
+
+    // Make bootstrap gallery image formatter work. Not a great approach but works for now.
+    if ($element['#formatter'] == 'bootstrap_gallery_image_formatter') {
+      $variables['modal'] = array(
+        '#theme' => 'bootstrap_modal',
+        '#close_button' => TRUE,
+        '#title' => '&nbsp;',
+        '#body_attributes' => array('class' => 'next'),
+        '#footer' =>  array(
+          'previous' => array(
+            '#type' => 'button',
+            '#value' => t('<i class="glyphicon glyphicon-chevron-left"></i> Previous'),
+            '#attributes' => array('class' => array('prev')),
+          ),
+          'next' => array(
+            '#type' => 'button',
+            '#value' => t('Next <i class="glyphicon glyphicon-chevron-right"></i>'),
+            '#attributes' => array('class' => array('next')),
+          ),
+        ),
+      );
+
+      $images = [];
+      foreach ($variables['items'][0]['content']['#images'] as $delta => $image) {
+        $images[$delta]['content']['#markup'] = '<a href="' . $image['url'] . '" title="' . $image['title'] . '" data-gallery>' . render($image['thumb']) . '</a>';
+      }
+
+      $variables['images'] = $images;
     }
   }
 }

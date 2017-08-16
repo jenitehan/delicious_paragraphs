@@ -38,45 +38,68 @@
 #}
 
 {% if formatter == 'bootstrap_gallery_image_formatter' %}
-  {% for item in items %}
-    {{ item.content }}
-  {% endfor %}
-{% else %}
 
-  {% if gallery_style == 'dp-inline-gallery--large-left' or gallery_style == 'dp-inline-gallery--large-right' %}
+  {{ attach_library('bootstrap_gallery_if/blueimp-gallery') }}
+  {%
+    set classes = [
+      'blueimp-gallery',
+      'blueimp-gallery-controls',
+    ]
+  %}
+  <div id="blueimp-gallery" {{ attributes.addClass(classes) }} data-use-bootstrap-modal="false">
+    <!-- The container for the modal slides -->
+    <div class="slides"></div>
+    <!-- Controls for the borderless lightbox -->
+    <h3 class="title"></h3>
+    <a class="prev">‹</a>
+    <a class="next">›</a>
+    {% if carousel == 0 %}
+      <a class="close">×</a>
+    {% endif %}
+    <a class="play-pause"></a>
+    <ol class="indicator"></ol>
+    <!-- Bootstrap modal from Bootstrap theme -->
+    {{ modal }}
+  </div>
+  <div id="links">
+{% endif %}
 
-    <div class="dp-inline-gallery__large-primary clearfix">
-      {% for item in items|slice(0, 1) %}
-        <div class="dp-inline-gallery__image">
-          {{ item.content }}
-        </div>
-      {% endfor %}
-    </div>
+{% if gallery_style == 'dp-inline-gallery--large-left' or gallery_style == 'dp-inline-gallery--large-right' %}
 
-    <div class="dp-inline-gallery__large-secondary clearfix">
-      {% for item in items|slice(1, 4) %}
-        <div class="dp-inline-gallery__image">
-          {{ item.content }}
-        </div>
-      {% endfor %}
-    </div>
-
-    <div class="dp-inline-gallery__large-tertiary clearfix">
-      {% for item in items|slice(5) %}
-        <div class="dp-inline-gallery__image">
-          {{ item.content }}
-        </div>
-      {% endfor %}
-    </div>
-
-  {% else %}
-
-    {% for item in items %}
+  <div class="dp-inline-gallery__large-primary clearfix">
+    {% for image in images|slice(0, 1) %}
       <div class="dp-inline-gallery__image">
-        {{ item.content }}
+        {{ image.content }}
       </div>
     {% endfor %}
+  </div>
 
-  {% endif %}
+  <div class="dp-inline-gallery__large-secondary clearfix">
+    {% for image in images|slice(1, 4) %}
+      <div class="dp-inline-gallery__image">
+        {{ image.content }}
+      </div>
+    {% endfor %}
+  </div>
 
+  <div class="dp-inline-gallery__large-tertiary clearfix">
+    {% for image in images|slice(5) %}
+      <div class="dp-inline-gallery__image">
+        {{ image.content }}
+      </div>
+    {% endfor %}
+  </div>
+
+{% else %}
+
+  {% for image in images %}
+    <div class="dp-inline-gallery__image">
+      {{ image.content }}
+    </div>
+  {% endfor %}
+
+{% endif %}
+
+{% if formatter == 'bootstrap_gallery_image_formatter' %}
+  </div>
 {% endif %}
