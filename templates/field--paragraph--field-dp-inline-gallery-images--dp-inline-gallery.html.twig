@@ -40,12 +40,10 @@
 {% if gallery_style == 'dp-inline-gallery--large-left' or gallery_style == 'dp-inline-gallery--large-right' %}
 
   <div class="dp-inline-gallery__large-primary clearfix">
-    {% for item in items %}
-      {% if loop.first %}
-        <div class="dp-inline-gallery__image">
-          {{ item.content }}
-        </div>
-      {% endif %}
+    {% for item in items|slice(0, 1) %}
+      <div class="dp-inline-gallery__image">
+        {{ item.content }}
+      </div>
     {% endfor %}
   </div>
 
