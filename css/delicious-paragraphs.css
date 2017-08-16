@@ -14,11 +14,31 @@
   display: block;
 }
 
+.dp-image figcaption {
+  background: #eee;
+  font-size: 12px;
+  padding: 3px 5px;
+  text-align: center;
+}
+
+.dp-image--small figcaption {
+  max-width: 150px;
+}
+
+.dp-image--medium figcaption {
+  max-width: 400px;
+}
+
+.dp-image--large figcaption {
+  max-width: 800px;
+}
+
 .dp-image--center {
   min-width: 100%;
 }
 
-.dp-image--center img {
+.dp-image--center img,
+.dp-image--center figcaption {
   margin-left: auto;
   margin-right: auto;
 }

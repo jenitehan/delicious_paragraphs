@@ -6,6 +6,7 @@ dependencies:
     - field.field.paragraph.dp_image.field_dp_image_alignment
     - field.field.paragraph.dp_image.field_dp_image_link
     - field.field.paragraph.dp_image.field_dp_image_size
+    - field.field.paragraph.dp_image.field_dp_image_title_caption
     - image.style.dp_full
     - paragraphs.paragraphs_type.dp_image
   module:
@@ -52,4 +53,14 @@ content:
     label: hidden
     settings: {  }
     third_party_settings: {  }
+  field_dp_image_title_caption:
+    weight: 4
+    label: above
+    settings:
+      format: boolean
+      format_custom_true: ''
+      format_custom_false: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
 hidden: {  }

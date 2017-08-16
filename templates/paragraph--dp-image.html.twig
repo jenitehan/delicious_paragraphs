@@ -67,10 +67,7 @@
 {# The template default set classes. #}
 {%
 set classes = [
-'paragraph',
-'paragraph--type--' ~ paragraph.bundle|clean_class,
-view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
-'dp-image',
+  'dp-image',
 ]
 %}
 
@@ -87,13 +84,18 @@ view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
 {% endif %}
 
 {# Prints div with classes, and content without Width and Background. #}
-<div{{ attributes.addClass(classes) }}>
+<figure{{ attributes.addClass(classes) }}>
   {{ title_suffix }}
   {% if content.field_dp_image_link|render is not empty %}
     <a href="{{ content.field_dp_image_link.0['#url'] }}">
   {% endif %}
-    {{ content|without('field_dp_image_alignment', 'field_dp_image_size', 'field_dp_image_link') }}
+    {{ content|without('field_dp_image_alignment', 'field_dp_image_size', 'field_dp_image_link', 'field_dp_image_title_caption') }}
   {% if content.field_dp_image_link|render is not empty %}
     </a>
   {% endif %}
-</div>
+  {% if paragraph.field_dp_image_title_caption.value %}
+    <figcaption>
+      {{ paragraph.field_dp_image.title }}
+    </figcaption>
+  {% endif %}
+</figure>

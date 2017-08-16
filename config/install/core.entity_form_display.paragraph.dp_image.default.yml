@@ -6,6 +6,7 @@ dependencies:
     - field.field.paragraph.dp_image.field_dp_image_alignment
     - field.field.paragraph.dp_image.field_dp_image_link
     - field.field.paragraph.dp_image.field_dp_image_size
+    - field.field.paragraph.dp_image.field_dp_image_title_caption
     - image.style.thumbnail
     - paragraphs.paragraphs_type.dp_image
   module:
@@ -25,13 +26,13 @@ content:
     type: image_image
     region: content
   field_dp_image_alignment:
-    weight: 3
+    weight: 4
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_dp_image_link:
-    weight: 1
+    weight: 2
     settings:
       placeholder_url: ''
       placeholder_title: ''
@@ -39,10 +40,17 @@ content:
     type: link_default
     region: content
   field_dp_image_size:
-    weight: 2
+    weight: 3
     settings: {  }
     third_party_settings: {  }
     type: options_select
+    region: content
+  field_dp_image_title_caption:
+    weight: 1
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
     region: content
 hidden:
   created: true
