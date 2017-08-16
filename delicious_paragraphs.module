@@ -52,6 +52,9 @@ function delicious_paragraphs_theme($existing, $type, $theme, $path) {
     'field__paragraph__field_dp_video__dp_video' => [
       'base hook' => 'paragraph',
     ],
+    'bootstrap_gallery' => [
+      'base hook' => 'bootstrap_gallery',
+    ],
   ];
 }
 
@@ -82,6 +85,7 @@ function delicious_paragraphs_preprocess_field(&$variables, $hook) {
     $gallery_style = $element['#object']->get('field_dp_inline_gallery_style')->first()->getValue();
     $gallery_style = $gallery_style['value'];
     $variables['gallery_style'] = $gallery_style;
+    $variables['formatter'] = $element['#formatter'];
     $image_style = 'dp_gallery_thumb_small';
 
     // Override image style for medium images.
@@ -91,11 +95,20 @@ function delicious_paragraphs_preprocess_field(&$variables, $hook) {
 
     // Set the image style.
     foreach ($variables['items'] as $delta => $item) {
-      if (($gallery_style == 'dp-inline-gallery--large-left' || $gallery_style == 'dp-inline-gallery--large-right') && $delta === 0) {
-        $variables['items'][$delta]['content']['#image_style'] = 'dp_gallery_thumb_medium';
+      if ($element['#formatter'] == 'bootstrap_gallery_image_formatter') {
+        foreach ($variables['items'][0]['content']['#images'] as $delta => $image) {
+          if ($delta === 0) {
+            $variables['items'][0]['content']['#images'][$delta]['thumb']['#image_style'] = 'dp_gallery_thumb_medium';
+          }
+        }
       }
       else {
-        $variables['items'][$delta]['content']['#image_style'] = $image_style;
+        if (($gallery_style == 'dp-inline-gallery--large-left' || $gallery_style == 'dp-inline-gallery--large-right') && $delta === 0) {
+          $variables['items'][$delta]['content']['#image_style'] = 'dp_gallery_thumb_medium';
+        }
+        else {
+          $variables['items'][$delta]['content']['#image_style'] = $image_style;
+        }
       }
     }
   }

@@ -37,38 +37,46 @@
  */
 #}
 
-{% if gallery_style == 'dp-inline-gallery--large-left' or gallery_style == 'dp-inline-gallery--large-right' %}
-
-  <div class="dp-inline-gallery__large-primary clearfix">
-    {% for item in items|slice(0, 1) %}
-      <div class="dp-inline-gallery__image">
-        {{ item.content }}
-      </div>
-    {% endfor %}
-  </div>
-
-  <div class="dp-inline-gallery__large-secondary clearfix">
-    {% for item in items|slice(1, 4) %}
-      <div class="dp-inline-gallery__image">
-        {{ item.content }}
-      </div>
-    {% endfor %}
-  </div>
-
-  <div class="dp-inline-gallery__large-tertiary clearfix">
-    {% for item in items|slice(5) %}
-      <div class="dp-inline-gallery__image">
-        {{ item.content }}
-      </div>
-    {% endfor %}
-  </div>
-
+{% if formatter == 'bootstrap_gallery_image_formatter' %}
+  {% for item in items %}
+    {{ item.content }}
+  {% endfor %}
 {% else %}
 
-  {% for item in items %}
-    <div class="dp-inline-gallery__image">
-      {{ item.content }}
+  {% if gallery_style == 'dp-inline-gallery--large-left' or gallery_style == 'dp-inline-gallery--large-right' %}
+
+    <div class="dp-inline-gallery__large-primary clearfix">
+      {% for item in items|slice(0, 1) %}
+        <div class="dp-inline-gallery__image">
+          {{ item.content }}
+        </div>
+      {% endfor %}
     </div>
-  {% endfor %}
+
+    <div class="dp-inline-gallery__large-secondary clearfix">
+      {% for item in items|slice(1, 4) %}
+        <div class="dp-inline-gallery__image">
+          {{ item.content }}
+        </div>
+      {% endfor %}
+    </div>
+
+    <div class="dp-inline-gallery__large-tertiary clearfix">
+      {% for item in items|slice(5) %}
+        <div class="dp-inline-gallery__image">
+          {{ item.content }}
+        </div>
+      {% endfor %}
+    </div>
+
+  {% else %}
+
+    {% for item in items %}
+      <div class="dp-inline-gallery__image">
+        {{ item.content }}
+      </div>
+    {% endfor %}
+
+  {% endif %}
 
 {% endif %}

@@ -1,0 +1,70 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a Bootstrap Gallery Image Formatter component.
+ *
+ * Available variables:
+ * - attributes: Attributes for the outer gallery div.
+ * - images: A list of images containing:
+ *    - title: A title for this image.
+ *    - url: Link to full image.
+ *    - thumb: Formatted image thumb.
+ * - controls: Initialize the Gallery with visible controls.
+ * - carousel: Display the images in an inline carousel instead of a lightbox.
+ * - use_modal: Enables the original borderless layout.
+ * - modal : Full modal html from bootstrap theme template.
+ *
+ * @ingroup templates
+ */
+#}
+{{ attach_library('bootstrap_gallery_if/blueimp-gallery') }}
+{%
+  set classes = [
+    'blueimp-gallery',
+    controls ? 'blueimp-gallery-controls',
+    carousel ? 'blueimp-gallery-carousel',
+  ]
+%}
+<div id="blueimp-gallery" {{ attributes.addClass(classes) }}>
+  <!-- The container for the modal slides -->
+  <div class="slides"></div>
+  <!-- Controls for the borderless lightbox -->
+  <h3 class="title"></h3>
+  <a class="prev">‹</a>
+  <a class="next">›</a>
+  {% if carousel == 0 %}
+    <a class="close">×</a>
+  {% endif %}
+  <a class="play-pause"></a>
+  <ol class="indicator"></ol>
+  <!-- Bootstrap modal from Bootstrap theme -->
+  {{ modal }}
+</div>
+<!-- Images link gallery -->
+<div id="links">
+  
+  <div class="dp-inline-gallery__large-primary clearfix">
+    {% for image in images|slice(0, 1) %}
+      <div class="dp-inline-gallery__image">
+        <a href="{{ image.url }}" title="{{ image.title }}" data-gallery>{{ image.thumb }}</a>
+      </div>
+    {% endfor %}
+  </div>
+
+  <div class="dp-inline-gallery__large-secondary clearfix">
+    {% for image in images|slice(1, 4) %}
+      <div class="dp-inline-gallery__image">
+        <a href="{{ image.url }}" title="{{ image.title }}" data-gallery>{{ image.thumb }}</a>
+      </div>
+    {% endfor %}
+  </div>
+
+  <div class="dp-inline-gallery__large-tertiary clearfix">
+    {% for image in images|slice(5) %}
+      <div class="dp-inline-gallery__image">
+        <a href="{{ image.url }}" title="{{ image.title }}" data-gallery>{{ image.thumb }}</a>
+      </div>
+    {% endfor %}
+  </div>
+  
+</div>
