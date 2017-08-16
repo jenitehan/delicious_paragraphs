@@ -80,14 +80,23 @@ function delicious_paragraphs_preprocess_field(&$variables, $hook) {
   // Change image size depending on gallery style selected.
   if ($element['#field_name'] == 'field_dp_inline_gallery_images') {
     $gallery_style = $element['#object']->get('field_dp_inline_gallery_style')->first()->getValue();
+    $gallery_style = $gallery_style['value'];
+    $variables['gallery_style'] = $gallery_style;
     $image_style = 'dp_gallery_thumb_small';
-    switch ($gallery_style['value']) {
-      case 'dp-inline-gallery--columns-2':
-        $image_style = 'dp_gallery_thumb_medium';
-        break;
+
+    // Override image style for medium images.
+    if ($gallery_style == 'dp-inline-gallery--columns-2') {
+      $image_style = 'dp_gallery_thumb_medium';
     }
+
+    // Set the image style.
     foreach ($variables['items'] as $delta => $item) {
-      $variables['items'][$delta]['content']['#image_style'] = $image_style;
+      if (($gallery_style == 'dp-inline-gallery--large-left' || $gallery_style == 'dp-inline-gallery--large-right') && $delta === 0) {
+        $variables['items'][$delta]['content']['#image_style'] = 'dp_gallery_thumb_medium';
+      }
+      else {
+        $variables['items'][$delta]['content']['#image_style'] = $image_style;
+      }
     }
   }
 }

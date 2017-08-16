@@ -16,6 +16,12 @@ settings:
     -
       value: dp-inline-gallery--columns-4
       label: '4 column'
+    -
+      value: dp-inline-gallery--large-left
+      label: 'Large left'
+    -
+      value: dp-inline-gallery--large-right
+      label: 'Large right'
   allowed_values_function: ''
 module: options
 locked: false
