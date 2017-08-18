@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_dp_cta_content
+    - paragraphs.paragraphs_type.dp_cta
+  module:
+    - text
+id: paragraph.dp_cta.field_dp_cta_content
+field_name: field_dp_cta_content
+entity_type: paragraph
+bundle: dp_cta
+label: Content
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

@@ -28,6 +28,9 @@ function delicious_paragraphs_help($route_name, RouteMatchInterface $route_match
  */
 function delicious_paragraphs_theme($existing, $type, $theme, $path) {
   return [
+    'paragraph__dp_cta' => [
+      'base hook' => 'paragraph',
+    ],
     'paragraph__dp_image' => [
       'base hook' => 'paragraph',
     ],
@@ -38,6 +41,15 @@ function delicious_paragraphs_theme($existing, $type, $theme, $path) {
       'base hook' => 'paragraph',
     ],
     'paragraph__dp_video' => [
+      'base hook' => 'paragraph',
+    ],
+    'field__paragraph__field_dp_cta_button_primary__dp_cta' => [
+      'base hook' => 'paragraph',
+    ],
+    'field__paragraph__field_dp_cta_content__dp_cta' => [
+      'base hook' => 'paragraph',
+    ],
+    'field__paragraph__field_dp_cta_heading__dp_cta' => [
       'base hook' => 'paragraph',
     ],
     'field__paragraph__field_dp_image__dp_image' => [

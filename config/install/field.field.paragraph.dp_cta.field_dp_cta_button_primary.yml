@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_dp_cta_button_primary
+    - paragraphs.paragraphs_type.dp_cta
+  module:
+    - link
+id: paragraph.dp_cta.field_dp_cta_button_primary
+field_name: field_dp_cta_button_primary
+entity_type: paragraph
+bundle: dp_cta
+label: 'Primary button'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 2
+field_type: link

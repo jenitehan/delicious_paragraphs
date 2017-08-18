@@ -12,6 +12,19 @@ dependencies:
 
 config_devel:
   
+  # Call to action paragraph.
+  - core.entity_form_display.paragraph.dp_cta.default
+  - core.entity_view_display.paragraph.dp_cta.default
+  - field.field.paragraph.dp_cta.field_dp_cta_button_primary
+  - field.field.paragraph.dp_cta.field_dp_cta_button_secondary
+  - field.field.paragraph.dp_cta.field_dp_cta_content
+  - field.field.paragraph.dp_cta.field_dp_cta_heading
+  - field.storage.paragraph.field_dp_cta_button_primary
+  - field.storage.paragraph.field_dp_cta_button_secondary
+  - field.storage.paragraph.field_dp_cta_content
+  - field.storage.paragraph.field_dp_cta_heading
+  - paragraphs.paragraphs_type.dp_cta
+  
   # Image paragraph.
   - core.entity_form_display.paragraph.dp_image.default
   - core.entity_view_display.paragraph.dp_image.default

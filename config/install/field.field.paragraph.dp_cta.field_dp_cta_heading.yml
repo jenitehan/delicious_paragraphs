@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_dp_cta_heading
+    - paragraphs.paragraphs_type.dp_cta
+id: paragraph.dp_cta.field_dp_cta_heading
+field_name: field_dp_cta_heading
+entity_type: paragraph
+bundle: dp_cta
+label: Heading
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

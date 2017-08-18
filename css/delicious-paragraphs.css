@@ -162,3 +162,24 @@
 .dp-table {
   clear: both;
 }
+
+/**
+ * Call to action.
+ */
+
+.dp-cta {
+  background-color: #f8f8f8;
+  border-bottom: 1px solid #ccc;
+  border-top: 1px solid #ccc;
+  margin: 20px 0;
+  padding: 20px 10px;
+  text-align: center;
+}
+
+.dp-cta__heading {
+  margin-top: 0;
+}
+
+.dp-cta__buttons {
+  margin-top: 20px;
+}

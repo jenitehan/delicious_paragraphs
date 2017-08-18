@@ -1,0 +1,57 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.dp_cta.field_dp_cta_button_primary
+    - field.field.paragraph.dp_cta.field_dp_cta_button_secondary
+    - field.field.paragraph.dp_cta.field_dp_cta_content
+    - field.field.paragraph.dp_cta.field_dp_cta_heading
+    - paragraphs.paragraphs_type.dp_cta
+  module:
+    - link
+    - text
+id: paragraph.dp_cta.default
+targetEntityType: paragraph
+bundle: dp_cta
+mode: default
+content:
+  field_dp_cta_button_primary:
+    weight: 2
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link_separate
+    region: content
+  field_dp_cta_button_secondary:
+    weight: 3
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link_separate
+    region: content
+  field_dp_cta_content:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_dp_cta_heading:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }
