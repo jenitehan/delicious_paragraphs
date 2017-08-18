@@ -78,7 +78,7 @@
  */
 
 .dp-inline-gallery {
-  margin: 20px auto;
+  margin: 20px auto 10px auto;
   max-width: 400px;
 }
 
