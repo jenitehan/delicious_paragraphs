@@ -11,7 +11,7 @@ field_name: field_dp_video
 entity_type: paragraph
 bundle: dp_video
 label: Video
-description: 'Enter the URL of the video. YouTube and Vimeo are supported. For example: https://www.youtube.com/watch?v=qOXzRqKqai8'
+description: 'Enter the URL of the video. YouTube and Vimeo are supported. For example: https://www.youtube.com/watch?v=dQw4w9WgXcQ'
 required: false
 translatable: false
 default_value: {  }
