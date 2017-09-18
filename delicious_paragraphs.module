@@ -40,6 +40,9 @@ function delicious_paragraphs_theme($existing, $type, $theme, $path) {
     'paragraph__dp_table' => [
       'base hook' => 'paragraph',
     ],
+    'paragraph__dp_text' => [
+      'base hook' => 'paragraph',
+    ],
     'paragraph__dp_video' => [
       'base hook' => 'paragraph',
     ],
@@ -59,6 +62,9 @@ function delicious_paragraphs_theme($existing, $type, $theme, $path) {
       'base hook' => 'paragraph',
     ],
     'field__paragraph__field_dp_table__dp_table' => [
+      'base hook' => 'paragraph',
+    ],
+    'field__paragraph__field_dp_text_text__dp_text' => [
       'base hook' => 'paragraph',
     ],
     'field__paragraph__field_dp_video__dp_video' => [
