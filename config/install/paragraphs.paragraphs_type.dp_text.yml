@@ -1,0 +1,6 @@
+langcode: en
+status: true
+dependencies: {  }
+id: dp_text
+label: Text
+behavior_plugins: {  }

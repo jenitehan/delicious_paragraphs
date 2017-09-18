@@ -56,6 +56,13 @@ config_devel:
   - field.storage.paragraph.field_dp_table
   - paragraphs.paragraphs_type.dp_table
 
+  # Text paragraph.
+  - core.entity_form_display.paragraph.dp_text.default
+  - core.entity_view_display.paragraph.dp_text.default
+  - field.field.paragraph.dp_text.field_dp_text_text
+  - field.storage.paragraph.field_dp_text_text
+  - paragraphs.paragraphs_type.dp_text
+
   # Video paragraph.
   - core.entity_form_display.paragraph.dp_video.default
   - core.entity_view_display.paragraph.dp_video.default

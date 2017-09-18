@@ -1,0 +1,25 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.dp_text.field_dp_text_text
+    - paragraphs.paragraphs_type.dp_text
+  module:
+    - text
+id: paragraph.dp_text.default
+targetEntityType: paragraph
+bundle: dp_text
+mode: default
+content:
+  field_dp_text_text:
+    weight: 0
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

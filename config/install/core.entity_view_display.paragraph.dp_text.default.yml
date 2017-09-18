@@ -1,0 +1,21 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.dp_text.field_dp_text_text
+    - paragraphs.paragraphs_type.dp_text
+  module:
+    - text
+id: paragraph.dp_text.default
+targetEntityType: paragraph
+bundle: dp_text
+mode: default
+content:
+  field_dp_text_text:
+    weight: 0
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+hidden: {  }
