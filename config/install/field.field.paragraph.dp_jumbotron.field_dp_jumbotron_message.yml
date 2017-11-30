@@ -6,7 +6,6 @@ dependencies:
     - paragraphs.paragraphs_type.dp_jumbotron
   module:
     - text
-third_party_settings: {  }
 id: paragraph.dp_jumbotron.field_dp_jumbotron_message
 field_name: field_dp_jumbotron_message
 entity_type: paragraph

@@ -10,6 +10,7 @@ dependencies:
     - paragraphs.paragraphs_type.dp_jumbotron
   module:
     - link
+    - options
     - text
 id: paragraph.dp_jumbotron.default
 targetEntityType: paragraph
@@ -28,6 +29,13 @@ content:
     third_party_settings: {  }
     type: link
     region: content
+  field_dp_jumbotron_content_align:
+    type: list_key
+    weight: 3
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
   field_dp_jumbotron_headline:
     weight: 0
     label: hidden
@@ -44,5 +52,4 @@ content:
     type: text_default
     region: content
 hidden:
-  field_dp_jumbotron_content_align: true
   field_dp_jumbotron_image: true

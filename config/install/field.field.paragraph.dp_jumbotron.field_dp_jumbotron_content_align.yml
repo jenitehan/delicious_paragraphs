@@ -16,7 +16,7 @@ required: true
 translatable: false
 default_value:
   -
-    value: pull-right
+    value: dp-jumbotron__content--right
 default_value_callback: ''
 settings: {  }
 field_type: list_string
