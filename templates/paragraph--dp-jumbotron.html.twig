@@ -51,7 +51,7 @@
   %}
 {% endif %}
 
-<div class="jumbotron dp-jumbotron">
+<div class="jumbotron dp-jumbotron"{% if paragraph.field_dp_jumbotron_image.value %}style="background-image: url({{ file_url(paragraph.field_dp_jumbotron_image.entity.fileuri) }});"{% endif %}>
   <div class="container">
     <div{{ attributes.addClass(content_classes) }}>
       {{ content.field_dp_jumbotron_headline }}
