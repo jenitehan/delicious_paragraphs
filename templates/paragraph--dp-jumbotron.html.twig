@@ -44,9 +44,9 @@
   {% set alignment = content.field_dp_jumbotron_content_align['#items'].getString() %}
   {% set content_classes = [
     'dp-jumbotron__content',
-    'pull-left' == alignment ? 'pull-left',
-    'pull-right' == alignment ? 'pull-right',
-    'center-block' == alignment ? 'center-block',
+    'dp-jumbotron__content--left' == alignment ? 'dp-jumbotron__content--left',
+    'dp-jumbotron__content--right' == alignment ? 'dp-jumbotron__content--right',
+    'dp-jumbotron__content--center' == alignment ? 'dp-jumbotron__content--center',
   ]
   %}
 {% endif %}

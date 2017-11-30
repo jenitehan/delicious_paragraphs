@@ -11,13 +11,13 @@ type: list_string
 settings:
   allowed_values:
     -
-      value: pull-left
+      value: dp-jumbotron__content--left
       label: Left
     -
-      value: pull-right
+      value: dp-jumbotron__content--right
       label: Right
     -
-      value: center-block
+      value: dp-jumbotron__content--center
       label: Center
   allowed_values_function: ''
 module: options
