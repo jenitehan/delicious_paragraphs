@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_dp_jumbotron_button_link
+    - paragraphs.paragraphs_type.dp_jumbotron
+  module:
+    - link
+id: paragraph.dp_jumbotron.field_dp_jumbotron_button_link
+field_name: field_dp_jumbotron_button_link
+entity_type: paragraph
+bundle: dp_jumbotron
+label: 'Button link'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 2
+field_type: link

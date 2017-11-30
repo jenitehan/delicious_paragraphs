@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+id: dp_jumbotron
+label: Jumbotron
+icon_uuid: null
+description: 'A large image background with customisable message or form.'
+behavior_plugins: {  }

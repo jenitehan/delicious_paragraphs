@@ -4,6 +4,7 @@ description: Default paragraphs for Delicious Creative websites.
 core: 8.x
 package: Paragraphs
 dependencies:
+  - field_group
   - image
   - link
   - paragraphs
@@ -48,6 +49,21 @@ config_devel:
   - field.storage.paragraph.field_dp_inline_gallery_images
   - field.storage.paragraph.field_dp_inline_gallery_style
   - paragraphs.paragraphs_type.dp_inline_gallery
+
+  # Jumbotron paragraph
+  - core.entity_form_display.paragraph.dc_jumbotron.default
+  - core.entity_view_display.paragraph.dc_jumbotron.default
+  - field.field.paragraph.dc_jumbotron.field_dp_jumbotron_button_link
+  - field.field.paragraph.dc_jumbotron.field_dp_jumbotron_content_align
+  - field.field.paragraph.dc_jumbotron.field_dp_jumbotron_headline
+  - field.field.paragraph.dc_jumbotron.field_dp_jumbotron_image
+  - field.field.paragraph.dc_jumbotron.field_dp_jumbotron_message
+  - field.storage.paragraph.field_dp_jumbotron_button_link
+  - field.storage.paragraph.field_dp_jumbotron_content_align
+  - field.storage.paragraph.field_dp_jumbotron_headline
+  - field.storage.paragraph.field_dp_jumbotron_image
+  - field.storage.paragraph.field_dp_jumbotron_message
+  - paragraphs.paragraphs_type.dc_jumbotron
 
   # Table paragraph.
   - core.entity_form_display.paragraph.dp_table.default

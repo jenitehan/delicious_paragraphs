@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_dp_jumbotron_content_align
+    - paragraphs.paragraphs_type.dp_jumbotron
+  module:
+    - options
+id: paragraph.dp_jumbotron.field_dp_jumbotron_content_align
+field_name: field_dp_jumbotron_content_align
+entity_type: paragraph
+bundle: dp_jumbotron
+label: 'Content alignment'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: pull-right
+default_value_callback: ''
+settings: {  }
+field_type: list_string

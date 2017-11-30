@@ -1,0 +1,89 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.dp_jumbotron.field_dp_jumbotron_button_link
+    - field.field.paragraph.dp_jumbotron.field_dp_jumbotron_content_align
+    - field.field.paragraph.dp_jumbotron.field_dp_jumbotron_headline
+    - field.field.paragraph.dp_jumbotron.field_dp_jumbotron_image
+    - field.field.paragraph.dp_jumbotron.field_dp_jumbotron_message
+    - image.style.thumbnail
+    - paragraphs.paragraphs_type.dp_jumbotron
+  module:
+    - field_group
+    - image
+    - link
+    - text
+third_party_settings:
+  field_group:
+    group_dp_jumbotron_options:
+      children:
+        - field_dp_jumbotron_content_align
+      parent_name: ''
+      weight: 5
+      format_type: details
+      format_settings:
+        id: ''
+        classes: ''
+        open: true
+        required_fields: false
+      label: Options
+    group_dp_jumbotron_image:
+      children:
+        - field_dp_jumbotron_image
+      parent_name: ''
+      weight: 2
+      format_type: details
+      format_settings:
+        id: ''
+        classes: ''
+        open: true
+        required_fields: false
+      label: Image
+id: paragraph.dp_jumbotron.default
+targetEntityType: paragraph
+bundle: dp_jumbotron
+mode: default
+content:
+  field_dp_jumbotron_button_link:
+    weight: 4
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_dp_jumbotron_content_align:
+    weight: 5
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_dp_jumbotron_headline:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_dp_jumbotron_image:
+    weight: 3
+    settings:
+      preview_image_style: thumbnail
+      progress_indicator: throbber
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_dp_jumbotron_message:
+    weight: 1
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true
