@@ -37,9 +37,6 @@ function delicious_paragraphs_theme($existing, $type, $theme, $path) {
     'paragraph__dp_inline_gallery' => [
       'base hook' => 'paragraph',
     ],
-    'paragraph__dp_jumbotron' => [
-      'base hook' => 'paragraph',
-    ],
     'paragraph__dp_table' => [
       'base hook' => 'paragraph',
     ],
@@ -62,15 +59,6 @@ function delicious_paragraphs_theme($existing, $type, $theme, $path) {
       'base hook' => 'paragraph',
     ],
     'field__paragraph__field_dp_inline_gallery_images__dp_inline_gallery' => [
-      'base hook' => 'paragraph',
-    ],
-    'field__paragraph__field_dp_jumbotron_button_link__dp_jumbotron' => [
-      'base hook' => 'paragraph',
-    ],
-    'field__paragraph__field_dp_jumbotron_headline__dp_jumbotron' => [
-      'base hook' => 'paragraph',
-    ],
-    'field__paragraph__field_dp_jumbotron_message__dp_jumbotron' => [
       'base hook' => 'paragraph',
     ],
     'field__paragraph__field_dp_table__dp_table' => [

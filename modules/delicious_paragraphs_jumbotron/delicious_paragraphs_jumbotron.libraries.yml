@@ -1,0 +1,5 @@
+delicious-paragraphs-jumbotron:
+  css:
+    component:
+      css/delicious-paragraphs-jumbotron.css:
+        minified: false
