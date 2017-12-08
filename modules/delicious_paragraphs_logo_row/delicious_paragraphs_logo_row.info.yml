@@ -2,6 +2,7 @@ name: Delicious Paragraphs Logo Row
 type: module
 description: Paragraph to show a row of logos or other images.
 core: 8.x
+version: '8.x-1.0'
 package: Delicious Paragraphs
 dependencies:
   - delicious_paragraphs
