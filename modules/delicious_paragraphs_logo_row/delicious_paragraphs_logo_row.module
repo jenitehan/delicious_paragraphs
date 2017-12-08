@@ -48,34 +48,3 @@ function delicious_paragraphs_logo_row_theme($existing, $type, $theme, $path) {
     ],
   ];
 }
-
-/**
- * Implements template_preprocess_field().
- */
-function delicious_paragraphs_logo_row_preprocess_field(&$variables, $hook) {
-  $element = $variables['element'];
-
-  if ($element['#field_name'] == 'field_dp_logo_row_logos') {
-    $count = count($variables['items']);
-    $classes = ['dp-logo-row__logo'];
-    if ($count <= 12) {
-      if ($count == 2 || $count == 3 || $count == 4 || $count == 6) {
-        $number = 12/$count;
-        $classes[] = "col-md-$number";
-      }
-      elseif ($count == 1) {
-        $classes[] = "col-md-12";
-      }
-      elseif ($count == 5 || $count == 10) {
-        $classes[] = "col-md-5ths";
-      }
-      else {
-        $classes[] = "col-md-3";
-      }
-    }
-    else {
-      $classes[] = "col-md-2";
-    }
-    $variables['attributes']['class'] = $classes;
-  }
-}

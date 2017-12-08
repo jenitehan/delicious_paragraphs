@@ -36,6 +36,27 @@
  * @see template_preprocess_field()
  */
 #}
+{%
+set items_count = items|length
+%}
+{%
+set classes = [
+  'dp-logo-row__logo',
+  items_count == 1 ? 'col-sm-12',
+  items_count == 2 ? 'col-sm-6',
+  items_count == 3 ? 'col-sm-4',
+  items_count == 4 ? 'col-sm-6 col-md-3',
+  items_count == 5 ? 'col-sm-5ths col-md-5ths',
+  items_count == 6 ? 'col-sm-6 col-md-2',
+  items_count == 7 ? 'col-md-3',
+  items_count == 8 ? 'col-sm-6 col-md-3',
+  items_count == 9 ? 'col-sm-4',
+  items_count == 10 ? 'col-sm-5ths col-md-5ths',
+  items_count == 11 ? 'col-md-3',
+  items_count == 12 ? 'col-sm-6 col-md-3',
+  items_count > 12 ? 'col-md-3',
+]
+%}
 {% for item in items %}
-  <div{{ attributes }}>{{ item.content }}</div>
+  <div{{ attributes.addClass(classes) }}>{{ item.content }}</div>
 {% endfor %}

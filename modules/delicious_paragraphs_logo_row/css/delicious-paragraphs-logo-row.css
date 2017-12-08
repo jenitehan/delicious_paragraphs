@@ -37,7 +37,7 @@
 
 @media (min-width: 768px) {
   .col-sm-5ths {
-    width: 20%;
+    width: 50%;
     float: left;
   }
 }
