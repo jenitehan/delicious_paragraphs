@@ -1,0 +1,26 @@
+name: Delicious Paragraphs Logo Row
+type: module
+description: Paragraph to show a row of logos or other images.
+core: 8.x
+package: Delicious Paragraphs
+dependencies:
+  - delicious_paragraphs
+
+config_devel:
+  - core.entity_form_display.paragraph.dp_logo_row.default
+  - core.entity_form_display.paragraph.dp_logo_row_logo.default
+  - core.entity_view_display.paragraph.dp_logo_row.default
+  - core.entity_view_display.paragraph.dp_logo_row_logo.default
+  - field.field.paragraph.dp_logo_row.field_dp_logo_row_footer
+  - field.field.paragraph.dp_logo_row.field_dp_logo_row_heading
+  - field.field.paragraph.dp_logo_row.field_dp_logo_row_logos
+  - field.field.paragraph.dp_logo_row_logo.field_dp_logo_row_logo_image
+  - field.field.paragraph.dp_logo_row_logo.field_dp_logo_row_logo_link
+  - field.storage.paragraph.field_dp_logo_row_footer
+  - field.storage.paragraph.field_dp_logo_row_heading
+  - field.storage.paragraph.field_dp_logo_row_logo_image
+  - field.storage.paragraph.field_dp_logo_row_logo_link
+  - field.storage.paragraph.field_dp_logo_row_logos
+  - paragraphs.paragraphs_type.dp_logo_row
+  - paragraphs.paragraphs_type.dp_logo_row_logo
+  - image.style.dp_logo

@@ -1,0 +1,81 @@
+<?php
+
+/**
+ * @file
+ * Contains delicious_paragraphs_logo_row.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function delicious_paragraphs_logo_row_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the delicious_paragraphs_logo_row module.
+    case 'help.page.delicious_paragraphs_logo_row':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Paragraph to show a row of logos or other images.') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function delicious_paragraphs_logo_row_theme($existing, $type, $theme, $path) {
+  return [
+    'paragraph__dp_logo_row' => [
+      'base hook' => 'paragraph',
+    ],
+    'paragraph__dp_logo_row_logo' => [
+      'base hook' => 'paragraph',
+    ],
+    'field__paragraph__field_dp_logo_row_heading__dp_logo_row' => [
+      'base hook' => 'paragraph',
+    ],
+    'field__paragraph__field_dp_logo_row_logos__dp_logo_row' => [
+      'base hook' => 'paragraph',
+    ],
+    'field__paragraph__field_dp_logo_row_footer__dp_logo_row' => [
+      'base hook' => 'paragraph',
+    ],
+    'field__paragraph__field_dp_logo_row_logo_image__dp_logo_row_logo' => [
+      'base hook' => 'paragraph',
+    ],
+  ];
+}
+
+/**
+ * Implements template_preprocess_field().
+ */
+function delicious_paragraphs_logo_row_preprocess_field(&$variables, $hook) {
+  $element = $variables['element'];
+
+  if ($element['#field_name'] == 'field_dp_logo_row_logos') {
+    $count = count($variables['items']);
+    $classes = ['dp-logo-row__logo'];
+    if ($count <= 12) {
+      if ($count == 2 || $count == 3 || $count == 4 || $count == 6) {
+        $number = 12/$count;
+        $classes[] = "col-md-$number";
+      }
+      elseif ($count == 1) {
+        $classes[] = "col-md-12";
+      }
+      elseif ($count == 5 || $count == 10) {
+        $classes[] = "col-md-5ths";
+      }
+      else {
+        $classes[] = "col-md-3";
+      }
+    }
+    else {
+      $classes[] = "col-md-2";
+    }
+    $variables['attributes']['class'] = $classes;
+  }
+}

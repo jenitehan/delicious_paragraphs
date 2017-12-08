@@ -1,0 +1,5 @@
+delicious-paragraphs-logo-row:
+  css:
+    component:
+      css/delicious-paragraphs-logo-row.css:
+        minified: false
