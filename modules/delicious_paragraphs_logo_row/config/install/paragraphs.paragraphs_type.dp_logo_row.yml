@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+id: dp_logo_row
+label: 'Logo row'
+icon_uuid: null
+description: 'A row of logos often used for an "As Seen In" or "Who We Work With" scenario.'
+behavior_plugins: {  }

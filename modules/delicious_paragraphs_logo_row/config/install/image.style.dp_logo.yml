@@ -1,0 +1,14 @@
+langcode: en
+status: true
+dependencies: {  }
+name: dp_logo
+label: 'DP Logo'
+effects:
+  e057fae2-8860-41b2-96f1-0cd109527627:
+    uuid: e057fae2-8860-41b2-96f1-0cd109527627
+    id: image_scale
+    weight: 1
+    data:
+      width: 300
+      height: 200
+      upscale: false

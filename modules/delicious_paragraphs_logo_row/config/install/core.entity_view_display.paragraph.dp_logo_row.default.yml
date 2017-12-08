@@ -1,0 +1,41 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.dp_logo_row.field_dp_logo_row_footer
+    - field.field.paragraph.dp_logo_row.field_dp_logo_row_heading
+    - field.field.paragraph.dp_logo_row.field_dp_logo_row_logos
+    - paragraphs.paragraphs_type.dp_logo_row
+  module:
+    - entity_reference_revisions
+    - text
+id: paragraph.dp_logo_row.default
+targetEntityType: paragraph
+bundle: dp_logo_row
+mode: default
+content:
+  field_dp_logo_row_footer:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_dp_logo_row_heading:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_dp_logo_row_logos:
+    type: entity_reference_revisions_entity_view
+    weight: 1
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+hidden: {  }
