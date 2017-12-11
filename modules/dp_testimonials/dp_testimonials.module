@@ -1,0 +1,38 @@
+<?php
+
+/**
+ * @file
+ * Contains dp_testimonials.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function dp_testimonials_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the dp_testimonials module.
+    case 'help.page.dp_testimonials':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Paragraph type to display testimonials.') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function dp_testimonials_theme($existing, $type, $theme, $path) {
+  return [
+    'paragraph__dp_testimonials' => [
+      'base hook' => 'paragraph',
+    ],
+    'field__paragraph__field_dp_testimonials_view__dp_testimonials' => [
+      'base hook' => 'paragraph',
+    ],
+  ];
+}

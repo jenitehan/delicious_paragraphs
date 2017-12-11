@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+id: dp_testimonials
+label: Testimonials
+icon_uuid: null
+description: 'References testimonial content.'
+behavior_plugins: {  }

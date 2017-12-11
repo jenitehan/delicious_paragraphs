@@ -1,0 +1,18 @@
+name: Delicious Paragraphs Testimonials
+type: module
+description: Paragraph type to display testimonials.
+core: 8.x
+package: Delicious Paragraphs
+dependencies:
+  - delicious_paragraphs
+  - views
+  - viewsreference
+  - delicious_testimonial
+
+config_devel:
+  - core.entity_form_display.paragraph.dp_testimonials.default
+  - core.entity_view_display.paragraph.dp_testimonials.default
+  - field.field.paragraph.dp_testimonials.field_dp_testimonials_view
+  - field.storage.paragraph.field_dp_testimonials_view
+  - paragraphs.paragraphs_type.dp_testimonials
+  - views.view.dp_testimonials_view

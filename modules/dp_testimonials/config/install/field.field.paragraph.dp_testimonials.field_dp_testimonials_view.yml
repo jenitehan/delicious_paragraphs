@@ -1,0 +1,61 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_dp_testimonials_view
+    - paragraphs.paragraphs_type.dp_testimonials
+    - views.view.dp_testimonials_view
+  module:
+    - viewsreference
+id: paragraph.dp_testimonials.field_dp_testimonials_view
+field_name: field_dp_testimonials_view
+entity_type: paragraph
+bundle: dp_testimonials
+label: 'Testimonials view'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    options:
+      limit: ''
+      title: 0
+    display_id: block_1
+    data: 'a:5:{s:8:"argument";N;s:5:"limit";s:0:"";s:6:"offset";N;s:5:"pager";N;s:5:"title";i:0;}'
+    target_uuid: a6f2cd14-7e3e-4e3f-917c-8e423ed70533
+default_value_callback: ''
+settings:
+  handler: 'default:view'
+  handler_settings:
+    target_bundles: null
+    auto_create: 0
+  plugin_types:
+    block: block
+    default: 0
+    page: 0
+    feed: 0
+  preselect_views:
+    dp_testimonials_view: dp_testimonials_view
+    block_content: 0
+    comment: 0
+    comments_recent: 0
+    content: 0
+    content_recent: 0
+    files: 0
+    frontpage: 0
+    taxonomy_term: 0
+    tb_manage_content_article: 0
+    tb_manage_content_delicious_testimonial: 0
+    tb_manage_content_page: 0
+    tb_manage_users: 0
+    user_admin_people: 0
+    watchdog: 0
+    who_s_new: 0
+    who_s_online: 0
+  enabled_settings:
+    limit: limit
+    title: title
+    argument: 0
+    offset: 0
+    pager: 0
+field_type: viewsreference

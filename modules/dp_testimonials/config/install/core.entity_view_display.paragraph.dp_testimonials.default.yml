@@ -1,0 +1,23 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.dp_testimonials.field_dp_testimonials_view
+    - paragraphs.paragraphs_type.dp_testimonials
+  module:
+    - viewsreference
+id: paragraph.dp_testimonials.default
+targetEntityType: paragraph
+bundle: dp_testimonials
+mode: default
+content:
+  field_dp_testimonials_view:
+    weight: 1
+    label: hidden
+    settings:
+      plugin_types:
+        - block
+    third_party_settings: {  }
+    type: viewsreference_formatter
+    region: content
+hidden: {  }
