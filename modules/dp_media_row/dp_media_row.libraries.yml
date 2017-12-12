@@ -1,0 +1,5 @@
+dp-media-row:
+  css:
+    component:
+      css/dp-media-row.css:
+        minified: false
