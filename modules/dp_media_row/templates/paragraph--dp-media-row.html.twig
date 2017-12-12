@@ -70,9 +70,6 @@ set classes = [
     <div{{ media_attributes.addClass(media_classes) }}>
       {{ content.field_dp_media_row_media }}
     </div>
-    {% if alignment == 'dp-media-row__media-align--center' %}
-      <div class="clearfix"></div>
-    {% endif %}
     <div{{ text_attributes.addClass(text_classes) }}>
       {{ content.field_dp_media_row_text }}
     </div>
