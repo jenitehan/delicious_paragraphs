@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+id: dp_media_row_image
+label: Image
+icon_uuid: null
+description: 'An image to be used with the Media row paragraph.'
+behavior_plugins: {  }

@@ -1,0 +1,14 @@
+langcode: en
+status: true
+dependencies: {  }
+name: dp_medium_large
+label: 'DP medium large'
+effects:
+  23ec3ec6-b8ce-4960-81d4-b21d47b2700a:
+    uuid: 23ec3ec6-b8ce-4960-81d4-b21d47b2700a
+    id: image_scale
+    weight: 1
+    data:
+      width: 600
+      height: null
+      upscale: true

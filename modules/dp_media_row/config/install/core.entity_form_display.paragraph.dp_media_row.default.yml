@@ -1,0 +1,71 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.dp_media_row.field_dp_media_row_align
+    - field.field.paragraph.dp_media_row.field_dp_media_row_media
+    - field.field.paragraph.dp_media_row.field_dp_media_row_size
+    - field.field.paragraph.dp_media_row.field_dp_media_row_text
+    - paragraphs.paragraphs_type.dp_media_row
+  module:
+    - field_group
+    - paragraphs
+    - text
+third_party_settings:
+  field_group:
+    group_media_options:
+      children:
+        - field_dp_media_row_align
+        - field_dp_media_row_size
+      parent_name: ''
+      weight: 1
+      format_type: details
+      format_settings:
+        label: 'Media options'
+        id: ''
+        classes: ''
+        open: false
+        required_fields: false
+      label: 'Media options'
+      region: content
+id: paragraph.dp_media_row.default
+targetEntityType: paragraph
+bundle: dp_media_row
+mode: default
+content:
+  field_dp_media_row_align:
+    weight: 5
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_dp_media_row_media:
+    type: entity_reference_paragraphs
+    weight: 0
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+  field_dp_media_row_size:
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_dp_media_row_text:
+    weight: 2
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

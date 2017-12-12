@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_dp_media_row_image_caption
+    - paragraphs.paragraphs_type.dp_media_row_image
+id: paragraph.dp_media_row_image.field_dp_media_row_image_caption
+field_name: field_dp_media_row_image_caption
+entity_type: paragraph
+bundle: dp_media_row_image
+label: 'Show title as caption'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'Yes'
+  off_label: 'No'
+field_type: boolean

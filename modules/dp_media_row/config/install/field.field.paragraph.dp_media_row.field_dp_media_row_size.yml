@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_dp_media_row_size
+    - paragraphs.paragraphs_type.dp_media_row
+  module:
+    - options
+id: paragraph.dp_media_row.field_dp_media_row_size
+field_name: field_dp_media_row_size
+entity_type: paragraph
+bundle: dp_media_row
+label: 'Media size'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: dp-media-row__media-size--large
+default_value_callback: ''
+settings: {  }
+field_type: list_string

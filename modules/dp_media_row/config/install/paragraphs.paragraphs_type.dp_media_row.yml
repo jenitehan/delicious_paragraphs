@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+id: dp_media_row
+label: 'Media row'
+icon_uuid: null
+description: 'A row consisting of an image or video and associated text. Content is displayed in two columns.'
+behavior_plugins: {  }

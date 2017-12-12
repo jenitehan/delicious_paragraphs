@@ -80,4 +80,5 @@ config_devel:
   - image.style.dp_gallery_thumb_small
   - image.style.dp_large
   - image.style.dp_medium
+  - image.style.dp_medium_large
   - image.style.dp_small

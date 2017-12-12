@@ -1,0 +1,65 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_dp_media_row_media
+    - paragraphs.paragraphs_type.dp_media_row
+    - paragraphs.paragraphs_type.dp_media_row_image
+    - paragraphs.paragraphs_type.dp_video
+  module:
+    - entity_reference_revisions
+id: paragraph.dp_media_row.field_dp_media_row_media
+field_name: field_dp_media_row_media
+entity_type: paragraph
+bundle: dp_media_row
+label: Media
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      dp_media_row_image: dp_media_row_image
+      dp_video: dp_video
+    target_bundles_drag_drop:
+      dp_cta:
+        weight: 12
+        enabled: false
+      dp_image:
+        weight: 13
+        enabled: false
+      dp_inline_gallery:
+        weight: 14
+        enabled: false
+      dp_jumbotron:
+        weight: 15
+        enabled: false
+      dp_logo_row:
+        weight: 16
+        enabled: false
+      dp_logo_row_logo:
+        weight: 17
+        enabled: false
+      dp_media_row:
+        weight: 18
+        enabled: false
+      dp_table:
+        weight: 19
+        enabled: false
+      dp_media_row_image:
+        enabled: true
+        weight: 20
+      dp_testimonials:
+        weight: 20
+        enabled: false
+      dp_text:
+        weight: 21
+        enabled: false
+      dp_video:
+        enabled: true
+        weight: 22
+field_type: entity_reference_revisions

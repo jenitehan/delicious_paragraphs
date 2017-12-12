@@ -1,0 +1,49 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.dp_media_row_image.field_dp_media_row_image_caption
+    - field.field.paragraph.dp_media_row_image.field_dp_media_row_image_image
+    - field.field.paragraph.dp_media_row_image.field_dp_media_row_image_link
+    - image.style.dp_medium_large
+    - paragraphs.paragraphs_type.dp_media_row_image
+  module:
+    - image
+    - link
+id: paragraph.dp_media_row_image.default
+targetEntityType: paragraph
+bundle: dp_media_row_image
+mode: default
+content:
+  field_dp_media_row_image_caption:
+    weight: 1
+    label: hidden
+    settings:
+      format: boolean
+      format_custom_true: ''
+      format_custom_false: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_dp_media_row_image_image:
+    weight: 0
+    label: hidden
+    settings:
+      image_style: dp_medium_large
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_dp_media_row_image_link:
+    weight: 2
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link_separate
+    region: content
+hidden: {  }
