@@ -1,0 +1,60 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.dp_link_row.field_dp_link_row_footer
+    - field.field.paragraph.dp_link_row.field_dp_link_row_heading
+    - field.field.paragraph.dp_link_row.field_dp_link_row_links
+    - paragraphs.paragraphs_type.dp_link_row
+  module:
+    - field_group
+    - link
+    - text
+third_party_settings:
+  field_group:
+    group_dp_link_row_footer:
+      children:
+        - field_dp_link_row_footer
+      parent_name: ''
+      weight: 2
+      format_type: details
+      format_settings:
+        id: ''
+        classes: ''
+        open: false
+        required_fields: false
+      label: Footer
+      region: content
+id: paragraph.dp_link_row.default
+targetEntityType: paragraph
+bundle: dp_link_row
+mode: default
+content:
+  field_dp_link_row_footer:
+    weight: 3
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_dp_link_row_heading:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_dp_link_row_links:
+    weight: 1
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

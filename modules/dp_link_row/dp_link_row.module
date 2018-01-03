@@ -1,0 +1,44 @@
+<?php
+
+/**
+ * @file
+ * Contains dp_link_row.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function dp_link_row_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the dp_link_row module.
+    case 'help.page.dp_link_row':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Link row paragraph that displays a list of text links.') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function dp_link_row_theme($existing, $type, $theme, $path) {
+  return [
+    'paragraph__dp_link_row' => [
+      'base hook' => 'paragraph',
+    ],
+    'field__paragraph__field_dp_link_row_heading__dp_link_row' => [
+      'base hook' => 'paragraph',
+    ],
+    'field__paragraph__field_dp_link_row_links__dp_link_row' => [
+      'base hook' => 'paragraph',
+    ],
+    'field__paragraph__field_dp_link_row_footer__dp_link_row' => [
+      'base hook' => 'paragraph',
+    ],
+  ];
+}

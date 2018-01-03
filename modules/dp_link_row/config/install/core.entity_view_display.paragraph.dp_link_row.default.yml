@@ -1,0 +1,44 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.dp_link_row.field_dp_link_row_footer
+    - field.field.paragraph.dp_link_row.field_dp_link_row_heading
+    - field.field.paragraph.dp_link_row.field_dp_link_row_links
+    - paragraphs.paragraphs_type.dp_link_row
+  module:
+    - link
+    - text
+id: paragraph.dp_link_row.default
+targetEntityType: paragraph
+bundle: dp_link_row
+mode: default
+content:
+  field_dp_link_row_footer:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_dp_link_row_heading:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_dp_link_row_links:
+    weight: 1
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+hidden: {  }

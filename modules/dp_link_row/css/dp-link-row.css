@@ -1,0 +1,20 @@
+/**
+ * CSS for Delicious Paragraphs Link Row.
+ */
+
+.dp-link-row {
+  padding-bottom: 30px;
+  padding-top: 30px;
+}
+
+.dp-link-row__heading {
+  margin-top: 0;
+}
+
+.dp-link-row__links {
+  font-size: 20px;
+}
+
+.dp-link-row__footer {
+  margin-top: 15px;
+}

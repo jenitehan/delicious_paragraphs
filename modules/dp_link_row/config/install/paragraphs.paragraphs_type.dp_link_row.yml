@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+id: dp_link_row
+label: 'Link row'
+icon_uuid: null
+description: 'A row of text links with a heading and optional footer text.'
+behavior_plugins: {  }

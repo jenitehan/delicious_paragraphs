@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_dp_link_row_footer
+    - paragraphs.paragraphs_type.dp_link_row
+  module:
+    - text
+id: paragraph.dp_link_row.field_dp_link_row_footer
+field_name: field_dp_link_row_footer
+entity_type: paragraph
+bundle: dp_link_row
+label: Footer
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

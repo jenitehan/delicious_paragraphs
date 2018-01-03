@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_dp_link_row_links
+    - paragraphs.paragraphs_type.dp_link_row
+  module:
+    - link
+id: paragraph.dp_link_row.field_dp_link_row_links
+field_name: field_dp_link_row_links
+entity_type: paragraph
+bundle: dp_link_row
+label: Links
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 2
+field_type: link

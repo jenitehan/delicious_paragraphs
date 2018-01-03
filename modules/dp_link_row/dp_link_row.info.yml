@@ -1,0 +1,19 @@
+name: Delicious Paragraphs Link Row
+type: module
+description: Media row paragraph that displays a list of text links.
+core: 8.x
+version: '8.x-1.0'
+package: Delicious Paragraphs
+dependencies:
+  - delicious_paragraphs
+
+config_devel:
+  - core.entity_form_display.paragraph.dp_link_row.default
+  - core.entity_view_display.paragraph.dp_link_row.default
+  - field.field.paragraph.dp_link_row.field_dp_link_row_footer
+  - field.field.paragraph.dp_link_row.field_dp_link_row_heading
+  - field.field.paragraph.dp_link_row.field_dp_link_row_links
+  - field.storage.paragraph.field_dp_link_row_footer
+  - field.storage.paragraph.field_dp_link_row_heading
+  - field.storage.paragraph.field_dp_link_row_links
+  - paragraphs.paragraphs_type.dp_link_row

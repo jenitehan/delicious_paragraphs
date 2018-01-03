@@ -1,0 +1,5 @@
+dp-link-row:
+  css:
+    component:
+      css/dp-link-row.css:
+        minified: false
