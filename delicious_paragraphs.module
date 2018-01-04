@@ -173,8 +173,9 @@ function delicious_paragraphs_theme_suggestions_paragraph_alter(&$suggestions, $
   $paragraph = $variables['elements']['#paragraph'];
   $parent = $paragraph->getParentEntity();
 
-  // Add a template suggestion for the parent node type.
+  // Add a template suggestions based on the parent node.
   if ($parent->getEntityTypeId() == 'node') {
     $suggestions[] = 'paragraph__' . $paragraph->bundle() . '__node_' . $parent->bundle();
+    $suggestions[] = 'paragraph__' . $paragraph->bundle() . '__node_' . $parent->id();
   }
 }
