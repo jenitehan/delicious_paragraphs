@@ -170,12 +170,9 @@ function delicious_paragraphs_preprocess_field(&$variables, $hook) {
  * Implements hook_theme_suggestions_HOOK_alter().
  */
 function delicious_paragraphs_theme_suggestions_paragraph_alter(&$suggestions, $variables) {
+  // Add template suggestions based on the parent entity.
   $paragraph = $variables['elements']['#paragraph'];
   $parent = $paragraph->getParentEntity();
-
-  // Add a template suggestions based on the parent node.
-  if ($parent->getEntityTypeId() == 'node') {
-    $suggestions[] = 'paragraph__' . $paragraph->bundle() . '__node_' . $parent->bundle();
-    $suggestions[] = 'paragraph__' . $paragraph->bundle() . '__node_' . $parent->id();
-  }
+  $suggestions[] = 'paragraph__' . $paragraph->bundle() . '__' . $parent->getEntityTypeId() . '_' . $parent->bundle();
+  $suggestions[] = 'paragraph__' . $paragraph->bundle() . '__' . $parent->getEntityTypeId() . '_' . $parent->id();
 }
