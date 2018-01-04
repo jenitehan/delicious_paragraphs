@@ -1,0 +1,65 @@
+<?php
+
+/**
+ * @file
+ * Contains dp_feature_box.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\image\Entity\ImageStyle;
+
+/**
+ * Implements hook_help().
+ */
+function dp_feature_box_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the dp_feature_box module.
+    case 'help.page.dp_feature_box':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Feature box paragraphs and a container row.') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function dp_feature_box_theme($existing, $type, $theme, $path) {
+  return [
+    'paragraph__dp_feature_box_row' => [
+      'base hook' => 'paragraph',
+    ],
+    'paragraph__dp_feature_box' => [
+      'base hook' => 'paragraph',
+    ],
+    'field__paragraph__field_dp_feature_box_row_heading__dp_feature_box_row' => [
+      'base hook' => 'paragraph',
+    ],
+    'field__paragraph__field_dp_feature_box_row_boxes__dp_feature_box_row' => [
+      'base hook' => 'paragraph',
+    ],
+    'field__paragraph__field_dp_feature_box_heading__dp_feature_box' => [
+      'base hook' => 'paragraph',
+    ],
+    'field__paragraph__field_dp_feature_box_content__dp_feature_box' => [
+      'base hook' => 'paragraph',
+    ],
+  ];
+}
+
+/**
+ * Implements template_preprocess_paragraph__PARAGRAPH_TYPE().
+ */
+function dp_feature_box_preprocess_paragraph__dp_feature_box(&$variables, $hook) {
+  if ($variables['paragraph']) {
+    $paragraph = $variables['paragraph'];
+    if($paragraph->field_dp_feature_box_bg_image[0]){
+        $bg_image = $paragraph->field_dp_feature_box_bg_image[0]->entity->getFileUri();
+        $image_url = ImageStyle::load('dp_medium_large')->buildUrl($bg_image);
+        $variables['bg_image'] = $image_url;
+    }
+  }
+}

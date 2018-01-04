@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+id: dp_feature_box
+label: 'Feature box'
+icon_uuid: null
+description: 'An individual feature box to be placed in a feature box row.'
+behavior_plugins: {  }

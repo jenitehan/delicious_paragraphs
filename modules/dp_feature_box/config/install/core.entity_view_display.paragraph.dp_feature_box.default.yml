@@ -1,0 +1,55 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.dp_feature_box.field_dp_feature_box_bg_image
+    - field.field.paragraph.dp_feature_box.field_dp_feature_box_button
+    - field.field.paragraph.dp_feature_box.field_dp_feature_box_content
+    - field.field.paragraph.dp_feature_box.field_dp_feature_box_heading
+    - paragraphs.paragraphs_type.dp_feature_box
+  module:
+    - image
+    - link
+    - text
+id: paragraph.dp_feature_box.default
+targetEntityType: paragraph
+bundle: dp_feature_box
+mode: default
+content:
+  field_dp_feature_box_bg_image:
+    weight: 3
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_dp_feature_box_button:
+    weight: 2
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_dp_feature_box_content:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_dp_feature_box_heading:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }

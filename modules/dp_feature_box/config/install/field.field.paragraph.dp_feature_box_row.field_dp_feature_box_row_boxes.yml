@@ -1,0 +1,72 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_dp_feature_box_row_boxes
+    - paragraphs.paragraphs_type.dp_feature_box
+    - paragraphs.paragraphs_type.dp_feature_box_row
+  module:
+    - entity_reference_revisions
+id: paragraph.dp_feature_box_row.field_dp_feature_box_row_boxes
+field_name: field_dp_feature_box_row_boxes
+entity_type: paragraph
+bundle: dp_feature_box_row
+label: 'Feature boxes'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      dp_feature_box: dp_feature_box
+    target_bundles_drag_drop:
+      dp_cta:
+        weight: 16
+        enabled: false
+      dp_feature_box:
+        enabled: true
+        weight: 17
+      dp_feature_box_row:
+        weight: 18
+        enabled: false
+      dp_image:
+        weight: 19
+        enabled: false
+      dp_inline_gallery:
+        weight: 20
+        enabled: false
+      dp_jumbotron:
+        weight: 21
+        enabled: false
+      dp_link_row:
+        weight: 22
+        enabled: false
+      dp_logo_row:
+        weight: 23
+        enabled: false
+      dp_logo_row_logo:
+        weight: 24
+        enabled: false
+      dp_media_row:
+        weight: 25
+        enabled: false
+      dp_media_row_image:
+        weight: 26
+        enabled: false
+      dp_table:
+        weight: 27
+        enabled: false
+      dp_testimonials:
+        weight: 28
+        enabled: false
+      dp_text:
+        weight: 29
+        enabled: false
+      dp_video:
+        weight: 30
+        enabled: false
+field_type: entity_reference_revisions

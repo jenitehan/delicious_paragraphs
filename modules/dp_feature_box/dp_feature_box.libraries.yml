@@ -1,0 +1,5 @@
+dp-feature-box:
+  css:
+    component:
+      css/dp-feature-box.css:
+        minified: false

@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+id: dp_feature_box_row
+label: 'Feature box row'
+icon_uuid: null
+description: 'Container paragraph for feature boxes.'
+behavior_plugins: {  }

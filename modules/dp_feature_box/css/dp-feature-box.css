@@ -1,0 +1,38 @@
+/**
+ * CSS for Delicious Paragraphs Feature Boxes.
+ */
+
+.dp-feature-box-row {
+  padding-bottom: 15px;
+  padding-top: 30px;
+}
+
+.dp-feature-box-row__heading {
+  margin-bottom: 30px;
+  margin-top: 0;
+}
+
+.dp-feature-box {
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: 1px solid #ccc;
+  margin-bottom: 15px;
+}
+
+.dp-feature-box__inner {
+  padding: 15px;
+}
+
+.dp-feature-box__inner--bg-black {
+  background: rgba(0,0,0,0.5);
+  color: #fff;
+}
+
+.dp-feature-box__heading {
+  margin-top: 0;
+}
+
+.dp-feature-box__button-link {
+  margin-top: 15px;
+}
