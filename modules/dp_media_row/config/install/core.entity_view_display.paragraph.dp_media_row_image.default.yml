@@ -5,7 +5,7 @@ dependencies:
     - field.field.paragraph.dp_media_row_image.field_dp_media_row_image_caption
     - field.field.paragraph.dp_media_row_image.field_dp_media_row_image_image
     - field.field.paragraph.dp_media_row_image.field_dp_media_row_image_link
-    - image.style.dp_medium_large
+    - image.style.dp_full
     - paragraphs.paragraphs_type.dp_media_row_image
   module:
     - image
@@ -29,7 +29,7 @@ content:
     weight: 0
     label: hidden
     settings:
-      image_style: dp_medium_large
+      image_style: dp_full
       image_link: ''
     third_party_settings: {  }
     type: image
