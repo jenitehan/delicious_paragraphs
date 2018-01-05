@@ -6,6 +6,7 @@ dependencies:
     - field.field.paragraph.dp_feature_box.field_dp_feature_box_button
     - field.field.paragraph.dp_feature_box.field_dp_feature_box_content
     - field.field.paragraph.dp_feature_box.field_dp_feature_box_heading
+    - field.field.paragraph.dp_feature_box.field_dp_feature_box_link_modal
     - paragraphs.paragraphs_type.dp_feature_box
   module:
     - image
@@ -51,5 +52,15 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
+    region: content
+  field_dp_feature_box_link_modal:
+    weight: 4
+    label: hidden
+    settings:
+      format: boolean
+      format_custom_true: ''
+      format_custom_false: ''
+    third_party_settings: {  }
+    type: boolean
     region: content
 hidden: {  }

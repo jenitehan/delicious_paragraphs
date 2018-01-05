@@ -16,12 +16,14 @@ config_devel:
   - field.field.paragraph.dp_feature_box.field_dp_feature_box_button
   - field.field.paragraph.dp_feature_box.field_dp_feature_box_content
   - field.field.paragraph.dp_feature_box.field_dp_feature_box_heading
+  - field.field.paragraph.dp_feature_box.field_dp_feature_box_link_modal
   - field.field.paragraph.dp_feature_box_row.field_dp_feature_box_row_boxes
   - field.field.paragraph.dp_feature_box_row.field_dp_feature_box_row_heading
   - field.storage.paragraph.field_dp_feature_box_bg_image
   - field.storage.paragraph.field_dp_feature_box_button
   - field.storage.paragraph.field_dp_feature_box_content
   - field.storage.paragraph.field_dp_feature_box_heading
+  - field.storage.paragraph.field_dp_feature_box_link_modal
   - field.storage.paragraph.field_dp_feature_box_row_boxes
   - field.storage.paragraph.field_dp_feature_box_row_heading
   - paragraphs.paragraphs_type.dp_feature_box

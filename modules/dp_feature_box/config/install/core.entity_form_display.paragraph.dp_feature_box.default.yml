@@ -6,12 +6,29 @@ dependencies:
     - field.field.paragraph.dp_feature_box.field_dp_feature_box_button
     - field.field.paragraph.dp_feature_box.field_dp_feature_box_content
     - field.field.paragraph.dp_feature_box.field_dp_feature_box_heading
+    - field.field.paragraph.dp_feature_box.field_dp_feature_box_link_modal
     - image.style.thumbnail
     - paragraphs.paragraphs_type.dp_feature_box
   module:
+    - field_group
     - image
     - link
     - text
+third_party_settings:
+  field_group:
+    group_dp_feature_box_options:
+      children:
+        - field_dp_feature_box_link_modal
+      parent_name: ''
+      weight: 4
+      format_type: details
+      format_settings:
+        id: ''
+        classes: ''
+        open: false
+        required_fields: false
+      label: Options
+      region: content
 id: paragraph.dp_feature_box.default
 targetEntityType: paragraph
 bundle: dp_feature_box
@@ -48,6 +65,13 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+    region: content
+  field_dp_feature_box_link_modal:
+    weight: 5
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
     region: content
 hidden:
   created: true

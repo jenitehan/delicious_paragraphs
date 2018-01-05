@@ -52,10 +52,10 @@ set inner_classes = [
 %}
 <div{{ attributes.addClass(classes) }}{% if paragraph.field_dp_feature_box_bg_image.value %}style="background-image: url({{ bg_image }});"{% endif %}>
   <div{{ inner_attributes.addClass(inner_classes) }}>
-    {{ content|without('field_dp_feature_box_button','field_dp_feature_box_bg_image') }}
+    {{ content|without('field_dp_feature_box_button','field_dp_feature_box_bg_image','field_dp_feature_box_link_modal') }}
     {% if content.field_dp_feature_box_button|render is not empty %}
       <div class="dp-feature-box__button-link">
-        <a href="{{ content.field_dp_feature_box_button.0['#url'] }}" class="btn btn-primary">{{ content.field_dp_feature_box_button.0['#title'] }}</a>
+        <a href="{{ content.field_dp_feature_box_button.0['#url'] }}" class="btn btn-primary"{% if paragraph.field_dp_feature_box_link_modal.value %} data-toggle="modal" data-target="{{ content.field_dp_feature_box_button.0['#url'] }}"{% endif %}>{{ content.field_dp_feature_box_button.0['#title'] }}</a>
       </div>
     {% endif %}
   </div>
