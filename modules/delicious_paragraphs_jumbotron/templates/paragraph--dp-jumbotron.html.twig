@@ -58,7 +58,13 @@
       {{ content.field_dp_jumbotron_message }}
       {% if content.field_dp_jumbotron_button_link|render is not empty %}
         <div class="dp-jumbotron__button-link">
-          <a href="{{ content.field_dp_jumbotron_button_link.0['#url'] }}" class="btn btn-primary btn-lg"{% if paragraph.field_dp_jumbotron_link_modal.value %} data-toggle="modal" data-target="{{ content.field_dp_jumbotron_button_link.0['#url'] }}"{% endif %}>{{ content.field_dp_jumbotron_button_link.0['#title'] }}</a>
+          {% if paragraph.field_dp_jumbotron_link_modal.value %}
+            <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="{{ content.field_dp_jumbotron_button_link.0['#url'] }}">
+              {{ content.field_dp_jumbotron_button_link.0['#title'] }}
+            </button>
+          {% else %}
+            <a href="{{ content.field_dp_jumbotron_button_link.0['#url'] }}" class="btn btn-primary btn-lg">{{ content.field_dp_jumbotron_button_link.0['#title'] }}</a>
+          {% endif %}
         </div>
       {% endif %}
     </div>
