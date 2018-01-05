@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_dp_jumbotron_link_modal
+    - paragraphs.paragraphs_type.dp_jumbotron
+id: paragraph.dp_jumbotron.field_dp_jumbotron_link_modal
+field_name: field_dp_jumbotron_link_modal
+entity_type: paragraph
+bundle: dp_jumbotron
+label: 'Open link in modal'
+description: 'This will only work with modal content embedded on the current page. The link path must be set to the ID of the modal element to load.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'Yes'
+  off_label: 'No'
+field_type: boolean
