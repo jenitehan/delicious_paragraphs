@@ -12,6 +12,7 @@ config_devel:
   - core.entity_form_display.paragraph.dp_media_row_image.default
   - core.entity_view_display.paragraph.dp_media_row.default
   - core.entity_view_display.paragraph.dp_media_row_image.default
+  - field.field.paragraph.dp_media_row.field_dp_background
   - field.field.paragraph.dp_media_row.field_dp_media_row_align
   - field.field.paragraph.dp_media_row.field_dp_media_row_media
   - field.field.paragraph.dp_media_row.field_dp_media_row_size

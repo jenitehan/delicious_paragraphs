@@ -3,3 +3,8 @@ delicious-paragraphs:
     component:
       css/delicious-paragraphs.css:
         minified: false
+dp-background:
+  css:
+    component:
+      css/dp-background.css:
+        minified: false

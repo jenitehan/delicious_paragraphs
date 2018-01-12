@@ -2,6 +2,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.dp_media_row.field_dp_background
     - field.field.paragraph.dp_media_row.field_dp_media_row_align
     - field.field.paragraph.dp_media_row.field_dp_media_row_media
     - field.field.paragraph.dp_media_row.field_dp_media_row_size
@@ -17,6 +18,13 @@ targetEntityType: paragraph
 bundle: dp_media_row
 mode: default
 content:
+  field_dp_background:
+    weight: 6
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_key
+    region: content
   field_dp_media_row_align:
     weight: 4
     label: above

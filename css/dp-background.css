@@ -1,0 +1,21 @@
+/**
+ * CSS for Background field.
+ */
+
+.dp-background--black {
+  background-color: #000;
+  color: #fff;
+}
+
+.dp-background--dark-gray {
+  background-color: #222;
+  color: #fff;
+}
+
+.dp-background--med-gray {
+  background-color: #ccc;
+}
+
+.dp-background--light-gray {
+  background-color: #f8f8f8;
+}

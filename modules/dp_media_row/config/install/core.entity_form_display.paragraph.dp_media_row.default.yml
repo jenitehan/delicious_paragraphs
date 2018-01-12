@@ -2,6 +2,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.dp_media_row.field_dp_background
     - field.field.paragraph.dp_media_row.field_dp_media_row_align
     - field.field.paragraph.dp_media_row.field_dp_media_row_media
     - field.field.paragraph.dp_media_row.field_dp_media_row_size
@@ -19,6 +20,7 @@ third_party_settings:
         - field_dp_media_row_size
         - field_dp_media_row_align
         - field_dp_media_row_width
+        - field_dp_background
       parent_name: ''
       weight: 2
       format_type: details
@@ -35,6 +37,12 @@ targetEntityType: paragraph
 bundle: dp_media_row
 mode: default
 content:
+  field_dp_background:
+    weight: 7
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
   field_dp_media_row_align:
     weight: 5
     settings: {  }

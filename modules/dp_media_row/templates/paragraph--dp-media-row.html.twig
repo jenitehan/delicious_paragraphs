@@ -36,18 +36,28 @@
  * @ingroup themeable
  */
 #}
+{{ attach_library('delicious_paragraphs/dp-background') }}
 {{ attach_library('dp_media_row/dp-media-row') }}
 {% set width = content.field_dp_media_row_width['#items'].getString() %}
+{% set bg_colour = content.field_dp_background['#items'].getString() %}
 {%
 set classes = [
   'dp-media-row',
+  'container-fluid' == width ? 'dp-media-row--full',
   width,
+  bg_colour,
 ]
 %}
 {% set alignment = content.field_dp_media_row_align['#items'].getString() %}
 {% set size = content.field_dp_media_row_size['#items'].getString() %}
+{% set row_attributes = create_attribute() %}
 {% set media_attributes = create_attribute() %}
 {% set text_attributes = create_attribute() %}
+{%
+set row_classes = [
+  'row',
+]
+%}
 {% set media_classes = [
   'dp-media-row-media',
   'dp-media-row__media-size--small' == size ? 'col-sm-3',
@@ -69,7 +79,7 @@ set classes = [
 ]
 %}
 <div{{ attributes.addClass(classes) }}>
-  <div class="row">
+  <div{{ row_attributes.addClass(row_classes) }}>
     <div{{ media_attributes.addClass(media_classes) }}>
       {{ content.field_dp_media_row_media }}
     </div>

@@ -3,11 +3,31 @@
  */
 
 .dp-media-row {
-  padding-bottom: 30px;
-  padding-top: 30px;
+  margin-bottom: 30px;
+  margin-top: 30px;
 }
 
 .dp-media-row-media--full {
   padding-left: 0 !important;
   padding-right: 0 !important;
+}
+
+.dp-media-row__text {
+  padding: 15px;
+}
+
+.dp-media-row__text h2:first-child,
+.dp-media-row__text h3:first-child {
+  margin-top: 0;
+}
+
+@media (min-width: 768px) {
+  
+  .dp-media-row__text {
+    padding-left: 0;
+  }
+  
+  .dp-media-row--full .dp-media-row__text {
+    max-width: 600px;
+  }
 }

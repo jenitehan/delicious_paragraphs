@@ -13,6 +13,9 @@ dependencies:
   - video_embed_field
 
 config_devel:
+
+  # Shared fields.
+  - field.storage.paragraph.field_dp_background
   
   # Call to action paragraph.
   - core.entity_form_display.paragraph.dp_cta.default
