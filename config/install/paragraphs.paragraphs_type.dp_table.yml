@@ -3,4 +3,6 @@ status: true
 dependencies: {  }
 id: dp_table
 label: Table
+icon_uuid: null
+description: null
 behavior_plugins: {  }

@@ -3,4 +3,6 @@ status: true
 dependencies: {  }
 id: dp_inline_gallery
 label: 'Inline gallery'
+icon_uuid: null
+description: null
 behavior_plugins: {  }

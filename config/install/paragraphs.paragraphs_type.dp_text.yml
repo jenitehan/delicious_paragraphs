@@ -3,4 +3,6 @@ status: true
 dependencies: {  }
 id: dp_text
 label: Text
+icon_uuid: null
+description: null
 behavior_plugins: {  }
