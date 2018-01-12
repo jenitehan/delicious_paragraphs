@@ -37,10 +37,11 @@
  */
 #}
 {{ attach_library('dp_media_row/dp-media-row') }}
-{# add container class if not nested in another container #}
+{% set width = content.field_dp_media_row_width['#items'].getString() %}
 {%
 set classes = [
   'dp-media-row',
+  width,
 ]
 %}
 {% set alignment = content.field_dp_media_row_align['#items'].getString() %}
@@ -48,12 +49,14 @@ set classes = [
 {% set media_attributes = create_attribute() %}
 {% set text_attributes = create_attribute() %}
 {% set media_classes = [
+  'dp-media-row-media',
   'dp-media-row__media-size--small' == size ? 'col-sm-3',
   'dp-media-row__media-size--medium' == size ? 'col-sm-4',
   'dp-media-row__media-size--large' == size ? 'col-sm-6',
   'dp-media-row__media-size--small' == size and 'dp-media-row__media-align--right' == alignment ? 'col-sm-push-9',
   'dp-media-row__media-size--medium' == size and 'dp-media-row__media-align--right' == alignment ? 'col-sm-push-8',
   'dp-media-row__media-size--large' == size and 'dp-media-row__media-align--right' == alignment ? 'col-sm-push-6',
+  'container-fluid' == width ? 'dp-media-row-media--full',
 ]
 %}
 {% set text_classes = [

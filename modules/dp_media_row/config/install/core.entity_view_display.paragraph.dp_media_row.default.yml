@@ -6,6 +6,7 @@ dependencies:
     - field.field.paragraph.dp_media_row.field_dp_media_row_media
     - field.field.paragraph.dp_media_row.field_dp_media_row_size
     - field.field.paragraph.dp_media_row.field_dp_media_row_text
+    - field.field.paragraph.dp_media_row.field_dp_media_row_width
     - paragraphs.paragraphs_type.dp_media_row
   module:
     - entity_reference_revisions
@@ -45,5 +46,12 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: text_default
+    region: content
+  field_dp_media_row_width:
+    weight: 5
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_key
     region: content
 hidden: {  }
