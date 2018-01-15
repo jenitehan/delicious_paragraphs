@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_dp_background
+    - paragraphs.paragraphs_type.dp_cta
+  module:
+    - options
+id: paragraph.dp_cta.field_dp_background
+field_name: field_dp_background
+entity_type: paragraph
+bundle: dp_cta
+label: Background
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -20,6 +20,7 @@ config_devel:
   # Call to action paragraph.
   - core.entity_form_display.paragraph.dp_cta.default
   - core.entity_view_display.paragraph.dp_cta.default
+  - field.field.paragraph.dp_cta.field_dp_background
   - field.field.paragraph.dp_cta.field_dp_cta_button_primary
   - field.field.paragraph.dp_cta.field_dp_cta_button_secondary
   - field.field.paragraph.dp_cta.field_dp_cta_content

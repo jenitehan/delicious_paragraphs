@@ -2,6 +2,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.dp_cta.field_dp_background
     - field.field.paragraph.dp_cta.field_dp_cta_button_primary
     - field.field.paragraph.dp_cta.field_dp_cta_button_secondary
     - field.field.paragraph.dp_cta.field_dp_cta_content
@@ -9,12 +10,20 @@ dependencies:
     - paragraphs.paragraphs_type.dp_cta
   module:
     - link
+    - options
     - text
 id: paragraph.dp_cta.default
 targetEntityType: paragraph
 bundle: dp_cta
 mode: default
 content:
+  field_dp_background:
+    weight: 4
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_key
+    region: content
   field_dp_cta_button_primary:
     weight: 2
     label: hidden
