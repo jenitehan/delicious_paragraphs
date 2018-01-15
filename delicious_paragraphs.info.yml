@@ -16,6 +16,7 @@ config_devel:
 
   # Shared fields.
   - field.storage.paragraph.field_dp_background
+  - field.storage.paragraph.field_dp_margins
   
   # Call to action paragraph.
   - core.entity_form_display.paragraph.dp_cta.default
@@ -25,6 +26,7 @@ config_devel:
   - field.field.paragraph.dp_cta.field_dp_cta_button_secondary
   - field.field.paragraph.dp_cta.field_dp_cta_content
   - field.field.paragraph.dp_cta.field_dp_cta_heading
+  - field.field.paragraph.dp_cta.field_dp_margins
   - field.storage.paragraph.field_dp_cta_button_primary
   - field.storage.paragraph.field_dp_cta_button_secondary
   - field.storage.paragraph.field_dp_cta_content

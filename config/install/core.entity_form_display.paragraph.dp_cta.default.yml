@@ -7,6 +7,7 @@ dependencies:
     - field.field.paragraph.dp_cta.field_dp_cta_button_secondary
     - field.field.paragraph.dp_cta.field_dp_cta_content
     - field.field.paragraph.dp_cta.field_dp_cta_heading
+    - field.field.paragraph.dp_cta.field_dp_margins
     - paragraphs.paragraphs_type.dp_cta
   module:
     - field_group
@@ -17,6 +18,7 @@ third_party_settings:
     group_dp_cta_options:
       children:
         - field_dp_background
+        - field_dp_margins
       parent_name: ''
       weight: 5
       format_type: details
@@ -83,6 +85,12 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+    region: content
+  field_dp_margins:
+    weight: 6
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
     region: content
 hidden:
   created: true

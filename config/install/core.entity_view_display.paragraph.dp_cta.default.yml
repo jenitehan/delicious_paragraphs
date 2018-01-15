@@ -7,6 +7,7 @@ dependencies:
     - field.field.paragraph.dp_cta.field_dp_cta_button_secondary
     - field.field.paragraph.dp_cta.field_dp_cta_content
     - field.field.paragraph.dp_cta.field_dp_cta_heading
+    - field.field.paragraph.dp_cta.field_dp_margins
     - paragraphs.paragraphs_type.dp_cta
   module:
     - link
@@ -62,5 +63,12 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
+    region: content
+  field_dp_margins:
+    weight: 5
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_key
     region: content
 hidden: {  }

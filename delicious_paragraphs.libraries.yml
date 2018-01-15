@@ -8,3 +8,8 @@ dp-background:
     component:
       css/dp-background.css:
         minified: false
+dp-margins:
+  css:
+    component:
+      css/dp-margins.css:
+        minified: false

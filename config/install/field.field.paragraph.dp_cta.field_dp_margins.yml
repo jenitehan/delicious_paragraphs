@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_dp_margins
+    - paragraphs.paragraphs_type.dp_cta
+  module:
+    - options
+id: paragraph.dp_cta.field_dp_margins
+field_name: field_dp_margins
+entity_type: paragraph
+bundle: dp_cta
+label: Margins
+description: 'Margins control vertical spacing between elements.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

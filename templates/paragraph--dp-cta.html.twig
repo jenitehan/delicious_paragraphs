@@ -37,18 +37,21 @@
  */
 #}
 {{ attach_library('delicious_paragraphs/dp-background') }}
+{{ attach_library('delicious_paragraphs/dp-margins') }}
 {{ attach_library('delicious_paragraphs/delicious-paragraphs') }}
 {% set bg_colour = content.field_dp_background['#items'].getString() %}
+{% set margins = content.field_dp_margins['#items'].getString() %}
 {# The template default set classes. #}
 {%
 set classes = [
   'dp-cta',
   bg_colour,
+  margins,
 ]
 %}
 {# Prints div with classes, and content without Width and Background. #}
 <div{{ attributes.addClass(classes) }}>
-    {{ content|without('field_dp_cta_button_primary', 'field_dp_cta_button_secondary', 'field_dp_background') }}
+    {{ content|without('field_dp_cta_button_primary', 'field_dp_cta_button_secondary', 'field_dp_background', 'field_dp_margins') }}
     
     {% if content.field_dp_cta_button_primary|render is not empty or content.field_dp_cta_button_secondary|render is not empty %}
       <div class="dp-cta__buttons">
