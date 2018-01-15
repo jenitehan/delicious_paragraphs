@@ -176,6 +176,12 @@
   margin-top: 0;
 }
 
+.dp-cta__content h2:first-child,
+.dp-cta__content h3:first-child,
+.dp-cta__content h4:first-child {
+  margin-top: 0;
+}
+
 .dp-cta__buttons {
   margin-top: 20px;
 }
