@@ -1,0 +1,59 @@
+<?php
+
+/**
+ * @file
+ * Contains dp_webform.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\Component\Utility\Html;
+
+/**
+ * Implements hook_help().
+ */
+function dp_webform_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the dp_webform module.
+    case 'help.page.dp_webform':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Paragraph to display webforms.') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function dp_webform_theme($existing, $type, $theme, $path) {
+  return [
+    'paragraph__dp_webform' => [
+      'base hook' => 'paragraph',
+    ],
+    'field__paragraph__field_dp_webform_heading__dp_webform' => [
+      'base hook' => 'paragraph',
+    ],
+    'field__paragraph__field_dp_webform_webform__dp_webform' => [
+      'base hook' => 'paragraph',
+    ],
+  ];
+}
+
+/**
+ * Implements template_preprocess_paragraph__PARAGRAPH_TYPE().
+ */
+function dp_webform_preprocess_paragraph__dp_webform(&$variables) {
+  $paragraph = $variables['paragraph'];
+  $variables['webform_url'] = '';
+  $display = $paragraph->get('field_dp_webform_display')->value;
+  $variables['form_id'] = Html::cleanCssIdentifier($variables['content']['field_dp_webform_webform'][0]['#form_id']);
+
+  // Get the webform URL when link display is selected.
+  if ($display == 'link') {
+    $webform_id = $paragraph->get('field_dp_webform_webform')->target_id;
+    $url = \Drupal::entityTypeManager()->getStorage('webform')->load($webform_id)->toUrl()->toString();
+    $variables['webform_url'] = $url;
+  }
+}

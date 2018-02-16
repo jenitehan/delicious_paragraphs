@@ -1,0 +1,28 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_dp_webform_webform
+    - paragraphs.paragraphs_type.dp_webform
+  module:
+    - webform
+id: paragraph.dp_webform.field_dp_webform_webform
+field_name: field_dp_webform_webform
+entity_type: paragraph
+bundle: dp_webform
+label: Webform
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:webform'
+  handler_settings:
+    target_bundles: null
+    auto_create: false
+  default_data: ''
+  status: open
+  open: ''
+  close: ''
+field_type: webform

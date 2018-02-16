@@ -1,0 +1,65 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.dp_webform.field_dp_background
+    - field.field.paragraph.dp_webform.field_dp_webform_button_text
+    - field.field.paragraph.dp_webform.field_dp_webform_display
+    - field.field.paragraph.dp_webform.field_dp_webform_heading
+    - field.field.paragraph.dp_webform.field_dp_webform_webform
+    - field.field.paragraph.dp_webform.field_dp_width
+    - paragraphs.paragraphs_type.dp_webform
+  module:
+    - options
+    - webform
+id: paragraph.dp_webform.default
+targetEntityType: paragraph
+bundle: dp_webform
+mode: default
+content:
+  field_dp_background:
+    weight: 4
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_key
+    region: content
+  field_dp_webform_button_text:
+    weight: 3
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_dp_webform_display:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_key
+    region: content
+  field_dp_webform_heading:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_dp_webform_webform:
+    weight: 1
+    label: hidden
+    settings:
+      source_entity: true
+    third_party_settings: {  }
+    type: webform_entity_reference_entity_view
+    region: content
+  field_dp_width:
+    weight: 5
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_key
+    region: content
+hidden: {  }

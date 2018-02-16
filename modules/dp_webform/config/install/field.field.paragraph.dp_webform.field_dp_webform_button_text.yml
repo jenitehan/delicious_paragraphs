@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_dp_webform_button_text
+    - paragraphs.paragraphs_type.dp_webform
+id: paragraph.dp_webform.field_dp_webform_button_text
+field_name: field_dp_webform_button_text
+entity_type: paragraph
+bundle: dp_webform
+label: 'Button text'
+description: 'Text used for modal and link display buttons. This is not used when the full form is displayed.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 'Contact us'
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_dp_webform_heading
+    - paragraphs.paragraphs_type.dp_webform
+id: paragraph.dp_webform.field_dp_webform_heading
+field_name: field_dp_webform_heading
+entity_type: paragraph
+bundle: dp_webform
+label: Heading
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

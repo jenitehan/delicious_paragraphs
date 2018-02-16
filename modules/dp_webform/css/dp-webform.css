@@ -1,0 +1,12 @@
+/**
+ * CSS for Delicious Paragraphs Link Row.
+ */
+
+.dp-webform {
+  padding-bottom: 30px;
+  padding-top: 30px;
+}
+
+.dp-webform__heading {
+  margin-top: 0;
+}
