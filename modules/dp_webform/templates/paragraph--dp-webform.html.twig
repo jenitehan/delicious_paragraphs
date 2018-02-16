@@ -77,6 +77,7 @@ set classes = [
       </div>
     </div>
   {% elseif display == 'link' %}
+    {{ content.field_dp_webform_heading }}
     <a href="{{ webform_url }}" class="btn btn-primary btn-lg">{{ button_text }}</a>
   {% endif %}
 </div>
