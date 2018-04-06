@@ -9,6 +9,7 @@ dependencies:
     - field.field.paragraph.dp_image_text_row.field_dp_image_text_row_link
     - field.field.paragraph.dp_image_text_row.field_dp_image_text_row_text
     - field.field.paragraph.dp_image_text_row.field_dp_width
+    - image.style.dp_large
     - paragraphs.paragraphs_type.dp_image_text_row
   module:
     - image
@@ -39,7 +40,7 @@ content:
     weight: 0
     label: hidden
     settings:
-      image_style: ''
+      image_style: dp_large
       image_link: ''
     third_party_settings: {  }
     type: image
