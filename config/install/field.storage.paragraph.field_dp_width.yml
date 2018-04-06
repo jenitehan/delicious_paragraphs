@@ -11,8 +11,11 @@ type: list_string
 settings:
   allowed_values:
     -
-      value: container-fluid
+      value: container-full
       label: 'Full width'
+    -
+      value: container-fluid
+      label: 'Full width with margins'
     -
       value: container
       label: Centered
