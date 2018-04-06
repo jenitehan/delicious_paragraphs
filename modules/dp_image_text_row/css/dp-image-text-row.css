@@ -14,6 +14,7 @@
 }
 
 .dp-image-text-row__text-inner {
+  margin: 5%;
   padding: 50px 15px;
 }
 
@@ -34,5 +35,9 @@
   
   .dp-image-text-row__image.dp-image-text-row__image-align--right {
     order: 2;
+  }
+
+  .dp-image-text-row__text-inner {
+    margin: 0;
   }
 }
