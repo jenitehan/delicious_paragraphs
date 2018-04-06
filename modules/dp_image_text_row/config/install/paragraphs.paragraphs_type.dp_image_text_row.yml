@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+id: dp_image_text_row
+label: 'Image and Text Row'
+icon_uuid: null
+description: 'An image with text aligned to the right or left on larger screens.'
+behavior_plugins: {  }

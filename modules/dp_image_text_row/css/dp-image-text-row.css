@@ -1,0 +1,39 @@
+/**
+ * CSS for Delicious Paragraphs Media Row.
+ */
+
+.dp-image-text-row {
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+
+.dp-image-text-row__vert-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.dp-image-text-row__text-inner {
+  background: #f8f8f8;
+  padding: 50px 15px;
+}
+
+.dp-image-text-row__text-heading {
+  margin-top: 0;
+}
+
+.dp-image-text-row__text-link {
+  margin-top: 15px;
+}
+
+@media (min-width: 768px) {
+  
+  .dp-image-text-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  .dp-image-text-row__image.dp-image-text-row__image-align--right {
+    order: 2;
+  }
+}

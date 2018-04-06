@@ -1,0 +1,5 @@
+dp-image-text-row:
+  css:
+    component:
+      css/dp-image-text-row.css:
+        minified: false

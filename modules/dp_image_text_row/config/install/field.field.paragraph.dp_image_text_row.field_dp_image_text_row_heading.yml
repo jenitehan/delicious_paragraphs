@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_dp_image_text_row_heading
+    - paragraphs.paragraphs_type.dp_image_text_row
+id: paragraph.dp_image_text_row.field_dp_image_text_row_heading
+field_name: field_dp_image_text_row_heading
+entity_type: paragraph
+bundle: dp_image_text_row
+label: Heading
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
