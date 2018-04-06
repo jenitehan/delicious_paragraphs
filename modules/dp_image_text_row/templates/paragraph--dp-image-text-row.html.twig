@@ -36,8 +36,8 @@
  * @ingroup themeable
  */
 #}
+{{ attach_library('delicious_paragraphs/dp-background') }}
 {{ attach_library('dp_image_text_row/dp-image-text-row') }}
-
 {%
 set classes = [
   'dp-image-text-row',
@@ -45,10 +45,17 @@ set classes = [
 %}
 {% set alignment = content.field_dp_image_text_row_image_al['#items'].getString() %}
 {% set image_attributes = create_attribute() %}
+{% set text_inner_attributes = create_attribute() %}
 {% set image_classes = [
   'dp-image-text-row__image',
   'dp-image-text-row__vert-center',
   alignment,
+]
+%}
+{% set bg_colour = content.field_dp_background['#items'].getString() %}
+{% set text_inner_classes = [
+  'dp-image-text-row__text-inner',
+  bg_colour,
 ]
 %}
 
@@ -62,7 +69,7 @@ set classes = [
     
   </div>
   <div class="dp-image-text-row__text dp-image-text-row__vert-center">
-    <div class="dp-image-text-row__text-inner">
+    <div {{ text_inner_attributes.addClass(text_inner_classes) }}>
       {{ content.field_dp_image_text_row_heading }}
       {{ content.field_dp_image_text_row_text }}
       {% if content.field_dp_image_text_row_link|render is not empty %}

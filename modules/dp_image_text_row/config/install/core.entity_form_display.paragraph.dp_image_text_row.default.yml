@@ -2,6 +2,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.dp_image_text_row.field_dp_background
     - field.field.paragraph.dp_image_text_row.field_dp_image_text_row_heading
     - field.field.paragraph.dp_image_text_row.field_dp_image_text_row_image
     - field.field.paragraph.dp_image_text_row.field_dp_image_text_row_image_al
@@ -19,6 +20,7 @@ third_party_settings:
     group_dp_image_text_row_options:
       children:
         - field_dp_image_text_row_image_al
+        - field_dp_background
       parent_name: ''
       weight: 4
       format_type: details
@@ -34,6 +36,12 @@ targetEntityType: paragraph
 bundle: dp_image_text_row
 mode: default
 content:
+  field_dp_background:
+    weight: 6
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
   field_dp_image_text_row_heading:
     weight: 1
     settings:

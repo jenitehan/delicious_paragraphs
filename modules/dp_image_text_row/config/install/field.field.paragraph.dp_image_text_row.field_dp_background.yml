@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_dp_background
+    - paragraphs.paragraphs_type.dp_image_text_row
+  module:
+    - options
+id: paragraph.dp_image_text_row.field_dp_background
+field_name: field_dp_background
+entity_type: paragraph
+bundle: dp_image_text_row
+label: Background
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: dp-background--light-gray
+default_value_callback: ''
+settings: {  }
+field_type: list_string

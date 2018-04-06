@@ -2,6 +2,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.dp_image_text_row.field_dp_background
     - field.field.paragraph.dp_image_text_row.field_dp_image_text_row_heading
     - field.field.paragraph.dp_image_text_row.field_dp_image_text_row_image
     - field.field.paragraph.dp_image_text_row.field_dp_image_text_row_image_al
@@ -18,6 +19,13 @@ targetEntityType: paragraph
 bundle: dp_image_text_row
 mode: default
 content:
+  field_dp_background:
+    weight: 5
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_key
+    region: content
   field_dp_image_text_row_heading:
     weight: 1
     label: hidden
