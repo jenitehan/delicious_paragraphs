@@ -54,7 +54,12 @@ set classes = [
 
 <div{{ attributes.addClass(classes) }}>
   <div{{ image_attributes.addClass(image_classes) }}>
-    {{ content.field_dp_image_text_row_image }}
+    {% if content.field_dp_image_text_row_link|render is not empty %}
+      <a href="{{ content.field_dp_image_text_row_link.0['#url'] }}">{{ content.field_dp_image_text_row_image }}</a>
+    {% else %}
+      {{ content.field_dp_image_text_row_image }}
+    {% endif %}
+    
   </div>
   <div class="dp-image-text-row__text dp-image-text-row__vert-center">
     <div class="dp-image-text-row__text-inner">
