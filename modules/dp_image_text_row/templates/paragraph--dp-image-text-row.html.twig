@@ -44,6 +44,7 @@ set classes = [
 ]
 %}
 {% set alignment = content.field_dp_image_text_row_image_al['#items'].getString() %}
+{% set wrapper_class = content.field_dp_width['#items'].getString() %}
 {% set image_attributes = create_attribute() %}
 {% set text_inner_attributes = create_attribute() %}
 {% set image_classes = [
@@ -59,24 +60,29 @@ set classes = [
 ]
 %}
 
-<div{{ attributes.addClass(classes) }}>
-  <div{{ image_attributes.addClass(image_classes) }}>
-    {% if content.field_dp_image_text_row_link|render is not empty %}
-      <a href="{{ content.field_dp_image_text_row_link.0['#url'] }}">{{ content.field_dp_image_text_row_image }}</a>
-    {% else %}
-      {{ content.field_dp_image_text_row_image }}
-    {% endif %}
-    
-  </div>
-  <div class="dp-image-text-row__text dp-image-text-row__vert-center">
-    <div {{ text_inner_attributes.addClass(text_inner_classes) }}>
-      {{ content.field_dp_image_text_row_heading }}
-      {{ content.field_dp_image_text_row_text }}
-      {% if content.field_dp_image_text_row_link|render is not empty %}
-        <div class="dp-image-text-row__text-link">
-          <a href="{{ content.field_dp_image_text_row_link.0['#url'] }}" class="btn btn-primary">{{ content.field_dp_image_text_row_link.0['#title'] }}</a>
+{% if wrapper_class %}
+  <div class="{{ wrapper_class }}">
+{% endif %}
+    <div{{ attributes.addClass(classes) }}>
+      <div{{ image_attributes.addClass(image_classes) }}>
+        {% if content.field_dp_image_text_row_link|render is not empty %}
+          <a href="{{ content.field_dp_image_text_row_link.0['#url'] }}">{{ content.field_dp_image_text_row_image }}</a>
+        {% else %}
+          {{ content.field_dp_image_text_row_image }}
+        {% endif %}
+      </div>
+      <div class="dp-image-text-row__text dp-image-text-row__vert-center">
+        <div {{ text_inner_attributes.addClass(text_inner_classes) }}>
+          {{ content.field_dp_image_text_row_heading }}
+          {{ content.field_dp_image_text_row_text }}
+          {% if content.field_dp_image_text_row_link|render is not empty %}
+            <div class="dp-image-text-row__text-link">
+              <a href="{{ content.field_dp_image_text_row_link.0['#url'] }}" class="btn btn-primary">{{ content.field_dp_image_text_row_link.0['#title'] }}</a>
+            </div>
+          {% endif %}
         </div>
-      {% endif %}
-    </div>    
+      </div>
+    </div>
+{% if wrapper_class %}
   </div>
-</div>
+{% endif %}

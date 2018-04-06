@@ -8,6 +8,7 @@ dependencies:
     - field.field.paragraph.dp_image_text_row.field_dp_image_text_row_image_al
     - field.field.paragraph.dp_image_text_row.field_dp_image_text_row_link
     - field.field.paragraph.dp_image_text_row.field_dp_image_text_row_text
+    - field.field.paragraph.dp_image_text_row.field_dp_width
     - paragraphs.paragraphs_type.dp_image_text_row
   module:
     - image
@@ -68,5 +69,12 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: text_default
+    region: content
+  field_dp_width:
+    weight: 6
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_key
     region: content
 hidden: {  }
