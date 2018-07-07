@@ -8,18 +8,12 @@ dependencies:
   - delicious_paragraphs
 
 config_devel:
-  #- core.entity_form_display.paragraph.dp_image_text_row.default
-  #- core.entity_view_display.paragraph.dp_image_text_row.default
-  #- field.field.paragraph.dp_image_text_row.field_dp_background
-  #- field.field.paragraph.dp_image_text_row.field_dp_width
-  #- field.field.paragraph.dp_image_text_row.field_dp_image_text_row_heading
-  #- field.field.paragraph.dp_image_text_row.field_dp_image_text_row_image
-  #- field.field.paragraph.dp_image_text_row.field_dp_image_text_row_image_al
-  #- field.field.paragraph.dp_image_text_row.field_dp_image_text_row_link
-  #- field.field.paragraph.dp_image_text_row.field_dp_image_text_row_text
-  #- field.storage.paragraph.field_dp_image_text_row_heading
-  #- field.storage.paragraph.field_dp_image_text_row_image
-  #- field.storage.paragraph.field_dp_image_text_row_image_al
-  #- field.storage.paragraph.field_dp_image_text_row_link
-  #- field.storage.paragraph.field_dp_image_text_row_text
-  #- paragraphs.paragraphs_type.dp_image_text_row
+  - core.entity_form_display.paragraph.dp_featured_text.default
+  - core.entity_view_display.paragraph.dp_featured_text.default
+  - field.field.paragraph.dp_featured_text.field_dp_featured_text_bg_image
+  - field.field.paragraph.dp_featured_text.field_dp_featured_text_text
+  - field.field.paragraph.dp_featured_text.field_dp_featured_text_text_bg
+  - field.storage.paragraph.field_dp_featured_text_bg_image
+  - field.storage.paragraph.field_dp_featured_text_text
+  - field.storage.paragraph.field_dp_featured_text_text_bg
+  - paragraphs.paragraphs_type.dp_featured_text

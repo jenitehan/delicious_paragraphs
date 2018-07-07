@@ -1,0 +1,41 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.dp_featured_text.field_dp_featured_text_bg_image
+    - field.field.paragraph.dp_featured_text.field_dp_featured_text_text
+    - field.field.paragraph.dp_featured_text.field_dp_featured_text_text_bg
+    - paragraphs.paragraphs_type.dp_featured_text
+  module:
+    - image
+    - options
+    - text
+id: paragraph.dp_featured_text.default
+targetEntityType: paragraph
+bundle: dp_featured_text
+mode: default
+content:
+  field_dp_featured_text_bg_image:
+    weight: 1
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_dp_featured_text_text:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_dp_featured_text_text_bg:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_key
+    region: content
+hidden: {  }

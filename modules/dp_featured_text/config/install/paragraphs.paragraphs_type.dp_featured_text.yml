@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+id: dp_featured_text
+label: 'Featured text'
+icon_uuid: null
+description: 'Specially styled text with optional backgrounds. Good for quotes or other text you want to stand out.'
+behavior_plugins: {  }
