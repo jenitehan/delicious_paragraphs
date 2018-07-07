@@ -1,0 +1,5 @@
+dp-featured-text:
+  css:
+    component:
+      css/dp-featured-text.css:
+        minified: false

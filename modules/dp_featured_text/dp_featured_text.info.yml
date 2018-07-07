@@ -1,0 +1,25 @@
+name: Delicious Paragraphs Featured Text
+type: module
+description: Text that needs to be featured.
+core: 8.x
+version: '8.x-1.0'
+package: Delicious Paragraphs
+dependencies:
+  - delicious_paragraphs
+
+config_devel:
+  #- core.entity_form_display.paragraph.dp_image_text_row.default
+  #- core.entity_view_display.paragraph.dp_image_text_row.default
+  #- field.field.paragraph.dp_image_text_row.field_dp_background
+  #- field.field.paragraph.dp_image_text_row.field_dp_width
+  #- field.field.paragraph.dp_image_text_row.field_dp_image_text_row_heading
+  #- field.field.paragraph.dp_image_text_row.field_dp_image_text_row_image
+  #- field.field.paragraph.dp_image_text_row.field_dp_image_text_row_image_al
+  #- field.field.paragraph.dp_image_text_row.field_dp_image_text_row_link
+  #- field.field.paragraph.dp_image_text_row.field_dp_image_text_row_text
+  #- field.storage.paragraph.field_dp_image_text_row_heading
+  #- field.storage.paragraph.field_dp_image_text_row_image
+  #- field.storage.paragraph.field_dp_image_text_row_image_al
+  #- field.storage.paragraph.field_dp_image_text_row_link
+  #- field.storage.paragraph.field_dp_image_text_row_text
+  #- paragraphs.paragraphs_type.dp_image_text_row

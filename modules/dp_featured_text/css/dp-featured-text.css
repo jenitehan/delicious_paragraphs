@@ -1,0 +1,39 @@
+/**
+ * CSS for Delicious Paragraphs Featured Text.
+ */
+
+.dp-featured-text {
+  margin: 50px auto;
+  padding: 50px;
+  background-color: #f8f8f8;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+  max-width: 1200px;
+}
+
+.dp-featured-text__text {
+  padding: 30px;
+}
+
+.dp-featured-text__text p {
+  font-size: 24px;
+  text-align: center;
+}
+
+.dp-featured-text__text--bg-light {
+  background-color: rgba(255,255,255,0.75);
+  color: #333;
+}
+
+.dp-featured-text__text--bg-dark {
+  background-color: rgba(0,0,0,0.75);
+  color: #fff;
+}
+
+@media (min-width: 768px) {
+  
+  .dp-featured-text__text p {
+    font-size: 30px;
+  }
+}

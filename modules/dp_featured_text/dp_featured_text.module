@@ -1,0 +1,44 @@
+<?php
+
+/**
+ * @file
+ * Contains dp_media_row.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function dp_featured_text_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the dp_media_row module.
+    case 'help.page.dp_featured_text':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Text that needs to be featured.') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function dp_featured_text_theme($existing, $type, $theme, $path) {
+  return [
+    'paragraph__dp_featured_text' => [
+      'base hook' => 'paragraph',
+    ],
+    'field__paragraph__field_dp_featured_text_text__dp_featured_text' => [
+      'base hook' => 'paragraph',
+    ],
+    //'field__paragraph__field_dp_featured_text_heading__dp_featured_text' => [
+    //  'base hook' => 'paragraph',
+    //],
+    //'field__paragraph__field_dp_featured_text_image__dp_featured_text' => [
+    //  'base hook' => 'paragraph',
+    //],
+  ];
+}
