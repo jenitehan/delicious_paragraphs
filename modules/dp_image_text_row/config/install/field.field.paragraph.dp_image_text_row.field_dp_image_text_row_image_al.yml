@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_dp_image_text_row_image_al
+    - paragraphs.paragraphs_type.dp_image_text_row
+  module:
+    - options
+id: paragraph.dp_image_text_row.field_dp_image_text_row_image_al
+field_name: field_dp_image_text_row_image_al
+entity_type: paragraph
+bundle: dp_image_text_row
+label: 'Image alignment'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: dp-image-text-row__image-align--left
+default_value_callback: ''
+settings: {  }
+field_type: list_string

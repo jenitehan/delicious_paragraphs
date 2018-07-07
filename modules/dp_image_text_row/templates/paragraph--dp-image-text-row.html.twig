@@ -1,0 +1,88 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a paragraph in Delicious Paragraphs.
+ *
+ * Available variables:
+ * - paragraph: Full paragraph entity.
+ *   - id: The paragraph ID.
+ *   - bundle: The type of the paragraph, for example, "image" or "text".
+ *   - authorid: The user ID of the paragraph author.
+ *   - createdtime: Formatted creation date. Preprocess functions can
+ *     reformat it by calling format_date() with the desired parameters on
+ *     $variables['paragraph']->getCreatedTime().
+ * - content: All paragraph items. Use {{ content }} to print them all,
+ *   or print a subset such as {{ content.field_example }}. Use
+ *   {{ content|without('field_example') }} to temporarily suppress the printing
+ *   of a given child element.
+ * - attributes: HTML attributes for the containing element.
+ *   The attributes.class element may contain one or more of the following
+ *   classes:
+ *   - paragraphs: The current template type (also known as a "theming hook").
+ *   - paragraphs--type-[type]: The current paragraphs type. For example, if the paragraph is an
+ *     "Image" it would result in "paragraphs--type--image". Note that the machine
+ *     name will often be in a short form of the human readable label.
+ *   - paragraphs--view-mode--[view_mode]: The View Mode of the paragraph; for example, a
+ *     preview would result in: "paragraphs--view-mode--preview", and
+ *     default: "paragraphs--view-mode--default".
+ * - view_mode: View mode; for example, "preview" or "full".
+ * - logged_in: Flag for authenticated user status. Will be true when the
+ *   current user is a logged-in member.
+ * - is_admin: Flag for admin user status. Will be true when the current user
+ *   is an administrator.
+ *
+ * @see template_preprocess_paragraph()
+ *
+ * @ingroup themeable
+ */
+#}
+{{ attach_library('delicious_paragraphs/dp-background') }}
+{{ attach_library('dp_image_text_row/dp-image-text-row') }}
+{%
+set classes = [
+  'dp-image-text-row',
+]
+%}
+{% set alignment = content.field_dp_image_text_row_image_al['#items'].getString() %}
+{% set wrapper_class = content.field_dp_width['#items'].getString() %}
+{% set image_attributes = create_attribute() %}
+{% set text_inner_attributes = create_attribute() %}
+{% set image_classes = [
+  'dp-image-text-row__image',
+  'dp-image-text-row__vert-center',
+  alignment,
+]
+%}
+{% set bg_colour = content.field_dp_background['#items'].getString() %}
+{% set text_inner_classes = [
+  'dp-image-text-row__text-inner',
+  bg_colour,
+]
+%}
+
+{% if wrapper_class %}
+  <div class="{{ wrapper_class }}">
+{% endif %}
+    <div{{ attributes.addClass(classes) }}>
+      <div{{ image_attributes.addClass(image_classes) }}>
+        {% if content.field_dp_image_text_row_link|render is not empty %}
+          <a href="{{ content.field_dp_image_text_row_link.0['#url'] }}">{{ content.field_dp_image_text_row_image }}</a>
+        {% else %}
+          {{ content.field_dp_image_text_row_image }}
+        {% endif %}
+      </div>
+      <div class="dp-image-text-row__text dp-image-text-row__vert-center">
+        <div {{ text_inner_attributes.addClass(text_inner_classes) }}>
+          {{ content.field_dp_image_text_row_heading }}
+          {{ content.field_dp_image_text_row_text }}
+          {% if content.field_dp_image_text_row_link|render is not empty %}
+            <div class="dp-image-text-row__text-link">
+              <a href="{{ content.field_dp_image_text_row_link.0['#url'] }}" class="btn btn-primary">{{ content.field_dp_image_text_row_link.0['#title'] }}</a>
+            </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+{% if wrapper_class %}
+  </div>
+{% endif %}

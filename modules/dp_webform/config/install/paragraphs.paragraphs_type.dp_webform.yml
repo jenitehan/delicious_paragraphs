@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+id: dp_webform
+label: Webform
+icon_uuid: null
+description: 'A webform that can be displayed immediately or loaded into a modal.'
+behavior_plugins: {  }

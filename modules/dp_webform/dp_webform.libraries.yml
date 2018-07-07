@@ -1,0 +1,5 @@
+dp-webform:
+  css:
+    component:
+      css/dp-webform.css:
+        minified: false

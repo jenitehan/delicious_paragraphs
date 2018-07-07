@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_dp_image_text_row_text
+    - paragraphs.paragraphs_type.dp_image_text_row
+  module:
+    - text
+id: paragraph.dp_image_text_row.field_dp_image_text_row_text
+field_name: field_dp_image_text_row_text
+entity_type: paragraph
+bundle: dp_image_text_row
+label: Text
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

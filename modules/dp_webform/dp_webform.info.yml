@@ -1,0 +1,24 @@
+name: Delicious Paragraphs Webform
+type: module
+description: Displays webforms in a paragraph.
+core: 8.x
+version: '8.x-1.0'
+package: Delicious Paragraphs
+dependencies:
+  - delicious_paragraphs
+  - webform
+
+config_devel:
+  - core.entity_form_display.paragraph.dp_webform.default
+  - core.entity_view_display.paragraph.dp_webform.default
+  - field.field.paragraph.dp_webform.field_dp_background
+  - field.field.paragraph.dp_webform.field_dp_webform_button_text
+  - field.field.paragraph.dp_webform.field_dp_webform_display
+  - field.field.paragraph.dp_webform.field_dp_webform_heading
+  - field.field.paragraph.dp_webform.field_dp_webform_webform
+  - field.field.paragraph.dp_webform.field_dp_width
+  - field.storage.paragraph.field_dp_webform_button_text
+  - field.storage.paragraph.field_dp_webform_display
+  - field.storage.paragraph.field_dp_webform_heading
+  - field.storage.paragraph.field_dp_webform_webform
+  - paragraphs.paragraphs_type.dp_webform
