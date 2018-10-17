@@ -48,7 +48,7 @@ function dp_webform_preprocess_paragraph__dp_webform(&$variables) {
   $paragraph = $variables['paragraph'];
   $variables['webform_url'] = '';
   $display = $paragraph->get('field_dp_webform_display')->value;
-  $variables['form_id'] = Html::cleanCssIdentifier($variables['content']['field_dp_webform_webform'][0]['#form_id']);
+  $variables['form_id'] = Html::cleanCssIdentifier($variables['content']['field_dp_webform_webform'][0]['#webform']->get('id'));
 
   // Get the webform URL when link display is selected.
   if ($display == 'link') {
