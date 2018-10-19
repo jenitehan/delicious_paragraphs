@@ -33,6 +33,15 @@
   margin-top: 0;
 }
 
+.dp-feature-box__inner--bg-black .dp-feature-box__heading,
+.dp-feature-box__inner--bg-black h2,
+.dp-feature-box__inner--bg-black h3,
+.dp-feature-box__inner--bg-black h4,
+.dp-feature-box__inner--bg-black h5,
+.dp-feature-box__inner--bg-black h6 {
+  color: #fff;
+}
+
 .dp-feature-box__button-link {
   margin-top: 15px;
 }
