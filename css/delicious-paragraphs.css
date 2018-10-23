@@ -185,3 +185,8 @@
 .dp-cta__buttons {
   margin-top: 20px;
 }
+
+/* Allow button text to wrap if need be */
+.dp-cta__buttons a {
+  white-space: normal;
+}
