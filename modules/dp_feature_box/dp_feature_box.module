@@ -56,10 +56,10 @@ function dp_feature_box_theme($existing, $type, $theme, $path) {
 function dp_feature_box_preprocess_paragraph__dp_feature_box(&$variables, $hook) {
   if ($variables['paragraph']) {
     $paragraph = $variables['paragraph'];
-    if($paragraph->field_dp_feature_box_bg_image[0]){
-        $bg_image = $paragraph->field_dp_feature_box_bg_image[0]->entity->getFileUri();
-        $image_url = ImageStyle::load('dp_medium_large')->buildUrl($bg_image);
-        $variables['bg_image'] = $image_url;
+    if ($paragraph->field_dp_feature_box_bg_image[0]) {
+      $bg_image = $paragraph->field_dp_feature_box_bg_image[0]->entity->getFileUri();
+      $image_url = ImageStyle::load('dp_medium_large')->buildUrl($bg_image);
+      $variables['bg_image'] = $image_url;
     }
   }
 }

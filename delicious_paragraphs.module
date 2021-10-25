@@ -78,7 +78,7 @@ function delicious_paragraphs_theme($existing, $type, $theme, $path) {
  */
 function delicious_paragraphs_preprocess_field(&$variables, $hook) {
   $element = $variables['element'];
-  
+
   // Output image size as selected image style.
   if ($element['#field_name'] == 'field_dp_image') {
     $size = $element['#object']->get('field_dp_image_size')->first()->getValue();
@@ -135,26 +135,31 @@ function delicious_paragraphs_preprocess_field(&$variables, $hook) {
     // Create new render element so we can swap it with bootstrap gallery data.
     $variables['images'] = $variables['items'];
 
-    // Make bootstrap gallery image formatter work. Not a great approach but works for now.
+    // Make bootstrap gallery image formatter work. Not a great approach,
+    // but works for now.
     if ($element['#formatter'] == 'bootstrap_gallery_image_formatter') {
-      $variables['modal'] = array(
+      $variables['modal'] = [
         '#theme' => 'bootstrap_modal',
         '#close_button' => TRUE,
         '#title' => '&nbsp;',
-        '#body_attributes' => array('class' => 'next'),
-        '#footer' =>  array(
-          'previous' => array(
+        '#body_attributes' => ['class' => 'next'],
+        '#footer' => [
+          'previous' => [
             '#type' => 'button',
             '#value' => t('<i class="glyphicon glyphicon-chevron-left"></i> Previous'),
-            '#attributes' => array('class' => array('prev')),
-          ),
-          'next' => array(
+            '#attributes' => [
+              'class' => ['prev'],
+            ],
+          ],
+          'next' => [
             '#type' => 'button',
             '#value' => t('Next <i class="glyphicon glyphicon-chevron-right"></i>'),
-            '#attributes' => array('class' => array('next')),
-          ),
-        ),
-      );
+            '#attributes' => [
+              'class' => ['next'],
+            ],
+          ],
+        ],
+      ];
 
       $images = [];
       foreach ($variables['items'][0]['content']['#images'] as $delta => $image) {
