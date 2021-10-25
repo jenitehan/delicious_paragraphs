@@ -2,6 +2,7 @@ name: Delicious Paragraphs
 type: module
 description: Default paragraphs for Delicious Creative websites.
 core: 8.x
+core_version_requirement: ^8 || ^9
 version: '8.x-1.2'
 package: Delicious Paragraphs
 dependencies:
@@ -18,7 +19,7 @@ config_devel:
   - field.storage.paragraph.field_dp_background
   - field.storage.paragraph.field_dp_margins
   - field.storage.paragraph.field_dp_width
-  
+
   # Call to action paragraph.
   - core.entity_form_display.paragraph.dp_cta.default
   - core.entity_view_display.paragraph.dp_cta.default
@@ -33,7 +34,7 @@ config_devel:
   - field.storage.paragraph.field_dp_cta_content
   - field.storage.paragraph.field_dp_cta_heading
   - paragraphs.paragraphs_type.dp_cta
-  
+
   # Image paragraph.
   - core.entity_form_display.paragraph.dp_image.default
   - core.entity_view_display.paragraph.dp_image.default

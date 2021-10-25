@@ -2,6 +2,7 @@ name: Delicious Paragraphs Image and Text Row
 type: module
 description: Paragraph that displays an image and associated text.
 core: 8.x
+core_version_requirement: ^8 || ^9
 version: '8.x-1.0'
 package: Delicious Paragraphs
 dependencies:

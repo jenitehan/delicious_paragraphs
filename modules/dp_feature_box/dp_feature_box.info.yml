@@ -2,6 +2,7 @@ name: Delicious Paragraphs Feature Box
 type: module
 description: Feature boxes and a container paragraph row.
 core: 8.x
+core_version_requirement: ^8 || ^9
 version: '8.x-1.0'
 package: Delicious Paragraphs
 dependencies:
