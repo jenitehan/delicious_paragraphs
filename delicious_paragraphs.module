@@ -163,7 +163,7 @@ function delicious_paragraphs_preprocess_field(&$variables, $hook) {
 
       $images = [];
       foreach ($variables['items'][0]['content']['#images'] as $delta => $image) {
-        $images[$delta]['content']['#markup'] = '<a href="' . $image['url'] . '" title="' . $image['title'] . '" data-gallery>' . render($image['thumb']) . '</a>';
+        $images[$delta]['content']['#markup'] = '<a href="' . $image['url'] . '" title="' . $image['title'] . '" data-gallery>' . \Drupal::service('renderer')->render($image['thumb']) . '</a>';
       }
 
       $variables['images'] = $images;
